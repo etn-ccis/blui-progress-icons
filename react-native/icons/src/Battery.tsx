@@ -1,38 +1,8 @@
-import Svg, {
-    // Circle,
-    // Ellipse,
-    G,
-    // Text,
-    // TSpan,
-    // TextPath,
-    Path,
-    Polygon,
-    // Polyline,
-    // Line,
-    Rect,
-    // Use,
-    // Image,
-    // Symbol,
-    Defs,
-    // LinearGradient,
-    // RadialGradient,
-    // Stop,
-    ClipPath,
-    // Pattern,
-    Mask,
-} from 'react-native-svg';
-import React, { SVGAttributes } from 'react';
-
-export const rangeValue = (value: number, min: number, max: number): number =>  Math.max(min, Math.min(value, max));
-
-export type ProgressIconProps = SVGAttributes<SVGElement> & {
-    backgroundColor?: string;
-    color?: string;
-    percent?: number;
-    size?: number;
-    outlined?: boolean;
-    charging?: boolean;
-};
+import React from 'react';
+import Svg, { G, Path, Polygon, Rect, Defs, ClipPath, Mask } from 'react-native-svg';
+import { BatteryProgressProps } from './types';
+import { rangeValue } from './utilities';
+import { ProgressIcon } from './ProgressIcon';
 
 const basePath =
     'M200,100V83C200,76,194,70,187,70H33C26,70,20,76,20,83v73C20,164,26,170,33,170h153c7,0,13-6,13-13V140h20v-40H200z';
@@ -47,8 +17,21 @@ const getBasepath = (outlined: boolean): string => (outlined ? outlinedPath : ba
 const getClipPath = (charging: boolean): string => (charging ? chargePath : basePath);
 const getID = (charging: boolean): string => (charging ? chargeID : baseID);
 
-export const Battery: React.FC<ProgressIconProps> = (props) => {
-    const { color = 'blue', percent = 0, outlined = false, size = 24, charging = false, backgroundColor } = props;
+export const Battery: React.FC<BatteryProgressProps> = (props) => {
+    const {
+        backgroundColor,
+        outlined = false,
+        charging = false,
+        size = 24,
+        percent = 100,
+        color = 'inherit',
+        labelSize,
+        labelColor,
+        showPercentLabel,
+        labelPosition,
+        styles,
+        ...svgProps
+    } = props;
 
     const maskIDleft = `maskLeft-${percent}`;
     const maskIDright = `maskRight-${percent}`;
@@ -56,67 +39,72 @@ export const Battery: React.FC<ProgressIconProps> = (props) => {
     const fillWidth = outlined ? 142 : 180;
 
     return (
-        <Svg height={`${size}px`} width={`${size}px`} x="0px" y="0px" viewBox="0 0 240 240">
-            <Defs>
-                {outlined && (
-                    <>
-                        <Mask id={maskIDleft}>
-                            <Rect width="100%" height="100%" fill="white" />
-                            <Polygon fill="black" points="115,130 115,150 40,110 95,110 95,90 170,130" />
-                        </Mask>
-                        <Mask id={maskIDright}>
-                            <Rect width="100%" height="100%" fill="white" />
-                            <Rect
-                                x={startX}
-                                y="70"
-                                fill="black"
-                                width={`${Math.min((rangeValue(percent, 0, 100) * fillWidth) / 100, fillWidth)}`}
-                                height="100"
-                            />
-                        </Mask>
-                    </>
-                )}
-                <ClipPath id={getID(charging)}>
-                    <Path /*overflow="visible"*/ d={getClipPath(charging)} />
-                </ClipPath>
-            </Defs>
-            {/* Basic background shape */}
-            {backgroundColor && (
-                <Path
-                    d={basePath}
-                    fill={backgroundColor}
-                    // fill={'yellow'}
-                    clipPath={outlined ? undefined : `url(#${getID(charging)})`}
-                />
-            )}
+        <ProgressIcon
+            color={color}
+            percent={percent}
+            labelColor={labelColor}
+            labelSize={labelSize}
+            size={size}
+            showPercentLabel={showPercentLabel}
+            labelPosition={labelPosition}
+            styles={styles}
+        >
+            <Svg height={`${size}px`} width={`${size}px`} x="0px" y="0px" viewBox="0 0 240 240" {...svgProps}>
+                <Defs>
+                    {outlined && (
+                        <>
+                            <Mask id={maskIDleft}>
+                                <Rect width="100%" height="100%" fill="white" />
+                                <Polygon fill="black" points="115,130 115,150 40,110 95,110 95,90 170,130" />
+                            </Mask>
+                            <Mask id={maskIDright}>
+                                <Rect width="100%" height="100%" fill="white" />
+                                <Rect
+                                    x={startX}
+                                    y="70"
+                                    fill="black"
+                                    width={`${Math.min((rangeValue(percent, 0, 100) * fillWidth) / 100, fillWidth)}`}
+                                    height="100"
+                                />
+                            </Mask>
+                        </>
+                    )}
+                    <ClipPath id={getID(charging)}>
+                        <Path d={getClipPath(charging)} />
+                    </ClipPath>
+                </Defs>
 
-            {/* Background Outline shape */}
-            <Path
-                fill={(!outlined && backgroundColor) || color || 'currentColor'}
-                // fill={'pink'}
-                fillOpacity={outlined || percent >= 100 || (!outlined && backgroundColor) ? 1 : 0.3}
-                clipPath={`url(#${getID(charging)})`}
-                d={getBasepath(outlined)}
-            />
-
-            <G fill={color || 'currentColor'}>
-                <Rect
-                    x={startX}
-                    y="70"
-                    clipPath={`url(#${getID(charging)})`}
-                    width={`${Math.min((rangeValue(percent, 0, 100) * fillWidth) / 100, fillWidth)}`}
-                    height="100"
-                    // fill={'orange'}
-                    mask={outlined && charging ? `url(#${maskIDleft})` : undefined}
-                />
-                {outlined && charging && (
-                    <Polygon
-                        points="115,130 115,150 40,110 95,110 95,90 170,130"
-                        mask={`url(#${maskIDright})`}
-                        // fill={'green'}
+                {/* Basic background shape */}
+                {backgroundColor && (
+                    <Path
+                        d={basePath}
+                        fill={backgroundColor}
+                        clipPath={outlined ? undefined : `url(#${getID(charging)})`}
                     />
                 )}
-            </G>
-        </Svg>
+
+                {/* Background Outline shape */}
+                <Path
+                    fill={(!outlined && backgroundColor) || color || 'currentColor'}
+                    fillOpacity={outlined || percent >= 100 || (!outlined && backgroundColor) ? 1 : 0.3}
+                    clipPath={`url(#${getID(charging)})`}
+                    d={getBasepath(outlined)}
+                />
+
+                <G fill={color || 'currentColor'}>
+                    <Rect
+                        x={startX}
+                        y="70"
+                        clipPath={`url(#${getID(charging)})`}
+                        width={`${Math.min((rangeValue(percent, 0, 100) * fillWidth) / 100, fillWidth)}`}
+                        height="100"
+                        mask={outlined && charging ? `url(#${maskIDleft})` : undefined}
+                    />
+                    {outlined && charging && (
+                        <Polygon points="115,130 115,150 40,110 95,110 95,90 170,130" mask={`url(#${maskIDright})`} />
+                    )}
+                </G>
+            </Svg>
+        </ProgressIcon>
     );
 };
