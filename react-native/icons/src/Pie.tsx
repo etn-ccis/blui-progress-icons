@@ -12,7 +12,7 @@ export const Pie: React.FC<PieProgressProps> = (props) => {
         style = {},
         size = 24,
         percent = 100,
-        color = 'inherit',
+        color,
         labelSize,
         labelColor,
         showPercentLabel,
@@ -104,13 +104,13 @@ Z
                 )}
                 <Path
                     clipPath={`url(#pxb-donut-clip-${stroke})`}
-                    fill={(!outlined && backgroundColor) || color || 'currentColor'}
+                    fill={(!outlined && backgroundColor) || color}
                     fillOpacity={outlined || percent >= 100 || (!outlined && backgroundColor) ? 1 : 0.3}
                     d={outlined ? outlineBase : twoToneBase}
                 />
                 {rangeValue(percent, 0, 100) > 0 && rangeValue(percent, 0, 100) < 100 && (
                     <Path
-                        fill={color || 'currentColor'}
+                        fill={color}
                         clipPath={`url(#pxb-donut-clip-${stroke})`}
                         d={`M 12,12 H 24 A 12,12,0,${rangeValue(percent, 0, 100) >= 50 ? 1 : 0},1,${
                             getCoordinates(rangeValue(percent, 0, 100))['x']
@@ -118,13 +118,7 @@ Z
                     />
                 )}
                 {rangeValue(percent, 0, 100) === 100 && outlined && (
-                    <Circle
-                        clipPath={`url(#pxb-donut-clip-${stroke})`}
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        fill={color || 'currentColor'}
-                    ></Circle>
+                    <Circle clipPath={`url(#pxb-donut-clip-${stroke})`} cx="12" cy="12" r="10" fill={color}></Circle>
                 )}
             </Svg>
         </ProgressIcon>

@@ -8,7 +8,7 @@ export type ProgressIconProps = SvgProps & {
         progressIconLabel?: TextStyle;
         centered?: TextStyle;
     };
-    color?: string;
+    color: string;
     labelColor?: string;
     labelPosition?: 'top' | 'bottom' | 'left' | 'right';
     labelSize?: number;

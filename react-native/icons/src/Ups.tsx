@@ -13,7 +13,7 @@ export const Ups: React.FC<UpsProgressProps> = (props) => {
         outlined = false,
         size = 24,
         percent = 100,
-        color = 'inherit',
+        color,
         labelSize,
         labelColor,
         showPercentLabel,
@@ -40,11 +40,7 @@ export const Ups: React.FC<UpsProgressProps> = (props) => {
             <Svg height={`${size}px`} width={`${size}px`} x={0} y={0} viewBox="0 0 240 240" {...svgProps}>
                 {!outlined && (
                     <>
-                        <Path
-                            opacity={backgroundColor ? 1 : 0.3}
-                            d={basePath}
-                            fill={backgroundColor || color || 'currentColor'}
-                        />
+                        <Path opacity={backgroundColor ? 1 : 0.3} d={basePath} fill={backgroundColor || color} />
                         <Mask
                             id="mask-filled"
                             mask-type="alpha"
@@ -54,7 +50,7 @@ export const Ups: React.FC<UpsProgressProps> = (props) => {
                             width={200}
                             height={200}
                         >
-                            <Path d={basePath} fill={color || 'currentColor'} />
+                            <Path d={basePath} fill={color} />
                         </Mask>
                         <G mask="url(#mask-filled)">
                             <Rect x={20} y={startY} width={200} height={fillHeight} fill={color} />

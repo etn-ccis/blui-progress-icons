@@ -24,7 +24,7 @@ export const Battery: React.FC<BatteryProgressProps> = (props) => {
         charging = false,
         size = 24,
         percent = 100,
-        color = 'inherit',
+        color,
         labelSize,
         labelColor,
         showPercentLabel,
@@ -85,13 +85,13 @@ export const Battery: React.FC<BatteryProgressProps> = (props) => {
 
                 {/* Background Outline shape */}
                 <Path
-                    fill={(!outlined && backgroundColor) || color || 'currentColor'}
+                    fill={(!outlined && backgroundColor) || color}
                     fillOpacity={outlined || percent >= 100 || (!outlined && backgroundColor) ? 1 : 0.3}
                     clipPath={`url(#${getID(charging)})`}
                     d={getBasepath(outlined)}
                 />
 
-                <G fill={color || 'currentColor'}>
+                <G fill={color}>
                     <Rect
                         x={startX}
                         y="70"

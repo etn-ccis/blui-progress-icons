@@ -17,7 +17,7 @@ export const Heart: React.FC<HeartProgressProps> = (props) => {
         outlined = false,
         size = 24,
         percent = 100,
-        color = 'inherit',
+        color,
         labelSize,
         labelColor,
         showPercentLabel,
@@ -43,7 +43,7 @@ export const Heart: React.FC<HeartProgressProps> = (props) => {
             <Svg height={`${size}px`} width={`${size}px`} x="0px" y="0px" viewBox="0 0 24 24" {...svgProps}>
                 {outlined && backgroundColor && <path d={basePath} fill={backgroundColor} />}
                 <Path
-                    fill={(!outlined && backgroundColor) || color || 'currentColor'}
+                    fill={(!outlined && backgroundColor) || color}
                     fillOpacity={outlined || percent >= 100 || (!outlined && backgroundColor) ? '1' : '0.3'}
                     d={getPath(outlined)}
                 />
@@ -52,7 +52,7 @@ export const Heart: React.FC<HeartProgressProps> = (props) => {
                 </ClipPath>
                 {percent > 0 && (
                     <Rect
-                        fill={color || 'currentColor'}
+                        fill={color}
                         clipPath="url(#pxb-heart-clip)"
                         x="2"
                         y={startY - (rangeValue(percent, 0, 100) * fillHeight) / 100}
