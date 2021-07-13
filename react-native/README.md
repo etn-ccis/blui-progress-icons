@@ -22,6 +22,14 @@ To install the PX Blue progress icons from NPM as a dependency for your project,
 yarn add @pxblue/react-native-progress-icons
 ```
 
+### Peer Dependencies
+
+In order to use this library, you must also have `react-native-svg` installed in your project. You can add it by running:
+
+```sh
+yarn add react-native-svg
+```
+
 ## Using the progress icons in your application
 
 The progress icon components can be imported and used like you would use any other component.
