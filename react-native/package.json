@@ -1,0 +1,22 @@
+{
+    "name": "rn-progress",
+    "version": "0.0.0",
+    "description": "Px Blue progress icons",
+    "author": "PX Blue <pxblue@eaton.com>",
+    "license": "BSD-3-Clause",
+    "scripts": {
+        "test:demo": "cd demo && yarn test",
+        "test:functions": "cd icons && yarn test --passWithNoTests",
+        "test:build": "bash scripts/testBuild.sh",
+        "test": "yarn test:functions && yarn test:build && yarn test:demo",
+        "build": "bash scripts/buildIcons.sh",
+        "link:components": "bash scripts/linkProgress.sh",
+        "start": "yarn link:components && cd demo && yarn ios",
+        "prettier": "cd icons && yarn prettier && cd ../demo && yarn prettier",
+        "prettier:check": "cd icons && yarn prettier:check && cd ../demo && yarn prettier:check",
+        "lint": "cd icons && yarn lint && cd ../demo && yarn lint",
+        "lint:fix": "cd icons && yarn lint:fix && cd ../demo && yarn lint:fix",
+        "precommit": "yarn prettier && yarn lint && yarn test",
+        "publish:package": "cd dist && rm -f *.tgz && set npm_config_yes=true && npx -p @pxblue/publish pxb-publish"
+    }
+}

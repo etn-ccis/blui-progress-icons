@@ -1,0 +1,84 @@
+{
+  "name": "@pxblue/react-native-progress-icons",
+  "version": "1.0.0",
+  "description": "React Native progress icons for PX Blue applications",
+  "author": "Power Xpert Blue <pxblue@eaton.com> (https://github.com/pxblue)",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/pxblue/progress-icons/issues"
+  },
+  "homepage": "https://github.com/pxblue/progress-icons#readme",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "build": "tsc --p tsconfig.lib.json",
+    "test": "jest --maxWorkers=2",
+    "clear:cache": "jest —clearCache",
+    "test:watch": "jest --watch",
+    "verify-build": "tsc --noEmit",
+    "watch:showcase": "tsc --p tsconfig.lib.json --watch --outdir ../demos/showcase/node_modules/@pxblue/react-native-components",
+    "prettier": "prettier \"src/**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --write",
+    "prettier:check": "prettier \"src/**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxblue/progress-icons.git"
+  },
+  "keywords": [
+    "progress",
+    "icons",
+    "svg",
+    "pxblue",
+    "battery",
+    "heart",
+    "ups",
+    "pie"
+  ],
+  "prettier": "@pxblue/prettier-config",
+  "dependencies": {
+    "color": "^3.1.3"
+  },
+  "peerDependencies": {
+    "react": "^16.13.0 || ^17.0.0",
+    "react-native": "^0.63.0",
+    "react-native-svg": ">=9.6.1"
+  },
+  "devDependencies": {
+    "@pxblue/eslint-config": "^2.0.4",
+    "@pxblue/prettier-config": "^1.0.2",
+    "@types/color": "^3.0.2",
+    "@types/faker": "^4.1.5",
+    "@types/jest": "^25.0.15",
+    "@types/node": "^14.14.7",
+    "@types/react": "^16.8.23",
+    "@types/react-native": "^0.63.0",
+    "@types/react-test-renderer": "^16.8.3",
+    "@typescript-eslint/eslint-plugin": "^4.8.0",
+    "@typescript-eslint/parser": "^4.8.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-react": "^7.17.0",
+    "faker": "^4.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.0",
+    "prettier": "^2.0.5",
+    "react": "^17.0.0",
+    "react-native": "^0.64.0",
+    "react-native-svg": "^12.0.0",
+    "react-native-vector-icons": "^8.0.0",
+    "react-test-renderer": "^17.0.0",
+    "ts-jest": "^27.0.0",
+    "typescript": "^4.0.0"
+  },
+  "files": [
+    "package.json",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "core/"
+  ],
+  "directories": {
+    "doc": "../docs"
+  }
+}
