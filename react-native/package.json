@@ -17,6 +17,7 @@
         "lint": "cd icons && yarn lint && cd ../demo && yarn lint",
         "lint:fix": "cd icons && yarn lint:fix && cd ../demo && yarn lint:fix",
         "precommit": "yarn prettier && yarn lint && yarn test",
-        "publish:package": "cd dist && rm -f *.tgz && set npm_config_yes=true && npx -p @pxblue/publish pxb-publish"
+        "publish:package": "cd dist && rm -f *.tgz && set npm_config_yes=true && npx -p @pxblue/publish pxb-publish",
+        "tag:package": "npx -p @pxblue/tag pxb-tag"
     }
 }
