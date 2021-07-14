@@ -93,7 +93,7 @@ jobs:
             at: .
         - run:
             name: Tag @pxblue/ng-progress-icons
-            command: cd angular/components && yarn tag:package -b $CIRCLE_BRANCH -s -ng-progress-icons
+            command: cd angular/components && cp ../CHANGELOG.md CHANGELOG.md && yarn tag:package -b $CIRCLE_BRANCH -s -ng-progress-icons
         - run:
             name: Publish @pxblue/react-progress-icons
             command: cd react/icons && yarn tag:package -b $CIRCLE_BRANCH -s -react-progress-icons
