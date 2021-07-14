@@ -36,12 +36,10 @@ jobs:
                   name: Prettier Check
                   command: |
                       yarn prettier:check
-                      cd ..
             - run:
                   name: Lint
                   command: |
                       yarn lint
-                      cd ..
             - run:
                   name: Build Packages
                   command: |
