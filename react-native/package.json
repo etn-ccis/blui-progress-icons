@@ -1,6 +1,6 @@
 {
-    "name": "rn-progress",
-    "version": "0.0.0",
+    "name": "@pxblue/react-native-progress-icons",
+    "version": "1.0.0",
     "description": "Px Blue progress icons",
     "author": "PX Blue <pxblue@eaton.com>",
     "license": "BSD-3-Clause",

@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  gh: circleci/github-cli@1.0.3
 jobs:
     build:
         docker:
@@ -57,6 +59,7 @@ jobs:
                   paths:
                     - angular/dist
                     - react/icons/dist
+                    - react-native/dist
 
     publish:
       docker:
@@ -76,6 +79,27 @@ jobs:
         - run:
             name: Publish @pxblue/react-progress-icons
             command: cd react/icons && yarn publish:package -b $CIRCLE_BRANCH
+        - run:
+            name: Publish @pxblue/react-native-progress-icons
+            command: cd react-native && yarn publish:package -b $CIRCLE_BRANCH
+
+    tag:
+      docker:
+        - image: circleci/node:12.9.1-browsers
+      steps:
+        - checkout
+        - gh/setup
+        - attach_workspace:
+            at: .
+        - run:
+            name: Tag @pxblue/ng-progress-icons
+            command: cd angular/components && yarn tag:package -b $CIRCLE_BRANCH -s -ng-progress-icons
+        - run:
+            name: Publish @pxblue/react-progress-icons
+            command: cd react/icons && yarn tag:package -b $CIRCLE_BRANCH -s -react-progress-icons
+        - run:
+            name: Publish @pxblue/react-native-progress-icons
+            command: cd react-native && yarn tag:package -b $CIRCLE_BRANCH -s -react-native-progress-icons
 workflows:
   version: 2
   icons:
