@@ -9,7 +9,7 @@ jobs:
             - checkout
             - restore_cache:
                   keys:
-                      - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}
+                      - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/icons/package.json" }}
                       - v1-dependencies-
             - run:
                   name: Install Dependencies
@@ -25,13 +25,15 @@ jobs:
                       yarn install
                       cd ../../../react-native/icons
                       yarn install
+                      cd ../demo
+                      yarn install
             - save_cache:
                   paths:
                       - node_modules
                       - react/icons/node_modules
                       - angular/components/node_modules
                       - react-native/icons/node_modules
-                  key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}
+                  key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/icons/package.json" }}
             - run:
                   name: Prettier Check
                   command: |
