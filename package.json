@@ -22,7 +22,7 @@
         "start:react-native": "cd react-native && yarn start",
         "prettier": "cd angular/components && yarn prettier && cd ../demos/showcase && yarn prettier && cd ../../../react/icons && yarn prettier && cd ../demo && yarn prettier",
         "prettier:check": "cd react-native && yarn prettier:check && cd .. && cd angular/components && yarn prettier:check && cd ../demos/showcase && yarn prettier:check && cd ../../../react/icons && yarn prettier:check && cd ../demo && yarn prettier:check",
-        "lint": "cd angular/components && yarn lint && cd ../demos/showcase && yarn lint && cd ../../../react/icons && yarn lint",
-        "lint:fix": "cd angular/components && yarn lint:fix && cd ../demos/showcase && yarn lint:fix"
+        "lint": "cd react-native && yarn lint && cd .. && cd angular/components && yarn lint && cd ../demos/showcase && yarn lint && cd ../../../react/icons && yarn lint",
+        "lint:fix": "cd react-native && yarn lint:fix && cd .. cd angular/components && yarn lint:fix && cd ../demos/showcase && yarn lint:fix"
     }
 }
