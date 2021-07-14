@@ -23,12 +23,14 @@ jobs:
                       yarn install
                       cd ../demos/showcase
                       yarn install
-                      cd ../../..
+                      cd ../../../react-native/icons
+                      yarn install
             - save_cache:
                   paths:
                       - node_modules
                       - react/icons/node_modules
                       - angular/components/node_modules
+                      - react-native/icons/node_modules
                   key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}
             - run:
                   name: Prettier Check
@@ -99,7 +101,7 @@ jobs:
             command: cd react/icons && yarn tag:package -b $CIRCLE_BRANCH -s -react-progress-icons
         - run:
             name: Publish @pxblue/react-native-progress-icons
-            command: cd react-native && yarn tag:package -b $CIRCLE_BRANCH -s -react-native-progress-icons
+            command: cd react-native/icons && cp ../CHANGELOG.md CHANGELOG.md && yarn tag:package -b $CIRCLE_BRANCH -s -react-native-progress-icons
 workflows:
   version: 2
   icons:
