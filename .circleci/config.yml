@@ -1,13 +1,15 @@
-version: 2
+version: 2.1
+orbs:
+  gh: circleci/github-cli@1.0.3
 jobs:
     build:
         docker:
-            - image: circleci/node:12.9.1-browsers
+            - image: circleci/node:14.17-browsers
         steps:
             - checkout
             - restore_cache:
                   keys:
-                      - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}
+                      - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/icons/package.json" }}
                       - v1-dependencies-
             - run:
                   name: Install Dependencies
@@ -21,23 +23,25 @@ jobs:
                       yarn install
                       cd ../demos/showcase
                       yarn install
-                      cd ../../..
+                      cd ../../../react-native/icons
+                      yarn install
+                      cd ../demo
+                      yarn install
             - save_cache:
                   paths:
                       - node_modules
                       - react/icons/node_modules
                       - angular/components/node_modules
-                  key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}
+                      - react-native/icons/node_modules
+                  key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/icons/package.json" }}
             - run:
                   name: Prettier Check
                   command: |
                       yarn prettier:check
-                      cd ..
             - run:
                   name: Lint
                   command: |
                       yarn lint
-                      cd ..
             - run:
                   name: Build Packages
                   command: |
@@ -57,10 +61,11 @@ jobs:
                   paths:
                     - angular/dist
                     - react/icons/dist
+                    - react-native/dist
 
     publish:
       docker:
-        - image: circleci/node:12.9.1-browsers
+        - image: circleci/node:14.17-browsers
       steps:
         - checkout
         - attach_workspace:
@@ -76,6 +81,27 @@ jobs:
         - run:
             name: Publish @pxblue/react-progress-icons
             command: cd react/icons && yarn publish:package -b $CIRCLE_BRANCH
+        - run:
+            name: Publish @pxblue/react-native-progress-icons
+            command: cd react-native && yarn publish:package -b $CIRCLE_BRANCH
+
+    tag:
+      docker:
+        - image: circleci/node:14.17-browsers
+      steps:
+        - checkout
+        - gh/setup
+        - attach_workspace:
+            at: .
+        - run:
+            name: Tag @pxblue/ng-progress-icons
+            command: cd angular/components && cp ../CHANGELOG.md CHANGELOG.md && yarn tag:package -b $CIRCLE_BRANCH -s -ng-progress-icons
+        - run:
+            name: Publish @pxblue/react-progress-icons
+            command: cd react/icons && yarn tag:package -b $CIRCLE_BRANCH -s -react-progress-icons
+        - run:
+            name: Publish @pxblue/react-native-progress-icons
+            command: cd react-native/icons && cp ../CHANGELOG.md CHANGELOG.md && yarn tag:package -b $CIRCLE_BRANCH -s -react-native-progress-icons
 workflows:
   version: 2
   icons:
@@ -89,3 +115,10 @@ workflows:
               only:
                 - master
                 - dev
+      - tag:
+          requires:
+            - publish
+          filters:
+            branches:
+              only:
+                - master

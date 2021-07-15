@@ -4,7 +4,13 @@
 /node_modules
 **/**/node_modules
 package-lock.json
+**/**/ios/Pods
 
+# builds
+**/ios/build/**
+**/android/app/build
+**/android/.gradle
+build.bundle
 
 # testing
 /coverage
@@ -14,6 +20,7 @@ package-lock.json
 /tmp
 angular/dist
 react/icons/dist
+react-native/dist
 
 # misc
 .DS_Store
