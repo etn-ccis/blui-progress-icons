@@ -42,7 +42,6 @@ import {Battery, Heart, Pie} from '@pxblue/react-native-progress-icons';
 <Pie color={'green'} percent={50} size={48} color={'blue'} ring={4} outlined={true}/>
 ```
 
-
 ## API
 
 ### Shared Properties
@@ -51,17 +50,17 @@ These props are available on all of the progress icons in this package.
 
 <div style="overflow: auto;">
 
-| Prop Name        | Description                            | Type                                                         | Required | Default   |
-| ---------------- | -------------------------------------- | ------------------------------------------------------------ | -------- | --------- |
-| backgroundColor  | Background color for the unfilled area | `string`                                                     | no       |           |
-| color            | The color used for the icon fill       | `string`                                                     | yes      |           |
-| labelColor       | Label text color                       | `string`                                                     | no       |           |
-| labelPosition    | Where to display the text label        | `'top'` \| `'bottom'` \| `'center'` \| `'right'` \| `'left'` | no       | `center`  |
-| labelSize        | Size of the label in px                | `number`                                                     | no       | `size/4`  |
-| outlined         | Whether to use the outlined style      | `boolean`                                                    | no       | false     |
-| percent          | The amount to fill the icon (0-100)    | `number`                                                     | no       | 100       |
-| showPercentLabel | Option to show percentage overlay      | `boolean`                                                    | no       | false     |
-| size             | The size of the icon (in px)           | `number`                                                     | no       | 24        |
+| Prop Name        | Description                            | Type                                                         | Required | Default  |
+| ---------------- | -------------------------------------- | ------------------------------------------------------------ | -------- | -------- |
+| backgroundColor  | Background color for the unfilled area | `string`                                                     | no       |          |
+| color            | The color used for the icon fill       | `string`                                                     | yes      |          |
+| labelColor       | Label text color                       | `string`                                                     | no       |          |
+| labelPosition    | Where to display the text label        | `'top'` \| `'bottom'` \| `'center'` \| `'right'` \| `'left'` | no       | `center` |
+| labelSize        | Size of the label in px                | `number`                                                     | no       | `size/4` |
+| outlined         | Whether to use the outlined style      | `boolean`                                                    | no       | false    |
+| percent          | The amount to fill the icon (0-100)    | `number`                                                     | no       | 100      |
+| showPercentLabel | Option to show percentage overlay      | `boolean`                                                    | no       | false    |
+| size             | The size of the icon (in px)           | `number`                                                     | no       | 24       |
 
 </div>
 
@@ -82,4 +81,3 @@ The pie supports all of the shared properties above and the following additional
 | Prop Name | Description                                                        | Type     | Required | Default |
 | --------- | ------------------------------------------------------------------ | -------- | -------- | ------- |
 | ring      | The thickness of the outer ring (1 = thin ring, 10 = full circle ) | `number` | no       | 10      |
-
