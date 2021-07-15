@@ -23,17 +23,17 @@ jobs:
                       yarn install
                       cd ../demos/showcase
                       yarn install
-                      cd ../../../react-native/icons
+                      cd ../../../react-native
                       yarn install
-                      cd ../demo
+                      cd demo
                       yarn install
             - save_cache:
                   paths:
                       - node_modules
                       - react/icons/node_modules
                       - angular/components/node_modules
-                      - react-native/icons/node_modules
-                  key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/icons/package.json" }}
+                      - react-native/node_modules
+                  key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
             - run:
                   name: Prettier Check
                   command: |
