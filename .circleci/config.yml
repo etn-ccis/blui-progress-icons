@@ -97,11 +97,11 @@ jobs:
             name: Tag @pxblue/ng-progress-icons
             command: cd angular/components && cp ../CHANGELOG.md CHANGELOG.md && yarn tag:package -b $CIRCLE_BRANCH -s -ng-progress-icons
         - run:
-            name: Publish @pxblue/react-progress-icons
+            name: Tag @pxblue/react-progress-icons
             command: cd react/icons && yarn tag:package -b $CIRCLE_BRANCH -s -react-progress-icons
         - run:
-            name: Publish @pxblue/react-native-progress-icons
-            command: cd react-native/icons && cp ../CHANGELOG.md CHANGELOG.md && yarn tag:package -b $CIRCLE_BRANCH -s -react-native-progress-icons
+            name: Tag @pxblue/react-native-progress-icons
+            command: cd react-native && yarn tag:package -b $CIRCLE_BRANCH -s -react-native-progress-icons
 workflows:
   version: 2
   icons:
