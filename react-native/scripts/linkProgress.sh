@@ -10,10 +10,8 @@ GRAY='\033[1;30m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}Building components...${NC}"
-cd icons
 yarn && yarn build
-cd ../demo && yarn && cd ios && pod install && cd .. &&
-cd ..
+cd demo && yarn && cd ios && pod install && cd ../..
 
 echo -en "${BLUE}Creating new folder in node_modules...${NC}"
 if [ -f ./demo/node_modules/@pxblue/react-native-progress-icons/package.json ]; then rm -rf "./demo/node_modules/@pxblue/react-native-progress-icons"; fi
@@ -25,7 +23,7 @@ cp -r ./dist/* ./demo/node_modules/@pxblue/react-native-progress-icons/
 echo -e "${GREEN}Done${NC}"
 
 echo -en "${BLUE}Copying package.json into node_modules...${NC}";
-cp -r ./icons/package.json ./demo/node_modules/@pxblue/react-native-progress-icons
+cp -r ./package.json ./demo/node_modules/@pxblue/react-native-progress-icons
 echo -e "${GREEN}Done${NC}"
 
 echo -en "\r\n${BLUE}Linking Components: ${NC}"
