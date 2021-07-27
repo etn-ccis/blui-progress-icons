@@ -10,7 +10,7 @@ import * as Colors from '@pxblue/colors';
 const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: I18nManager.isRTL });
 
 type LabelPosition = 'center' | 'top' | 'right' | 'bottom' | 'left';
-const positions: LabelPosition[] = ['center' , 'left', 'top', 'right', 'bottom'];
+const positions: LabelPosition[] = ['center', 'left', 'top', 'right', 'bottom'];
 
 export const App: React.FC = () => {
     const theme = useTheme();
