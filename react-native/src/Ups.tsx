@@ -1,5 +1,5 @@
 import React from 'react';
-import Svg, { G, Path, Rect, Defs, ClipPath, Mask } from 'react-native-svg';
+import Svg, { G, Path, Rect, Defs, ClipPath } from 'react-native-svg';
 import { UpsProgressProps } from './types';
 import { rangeValue } from './utilities';
 import { ProgressIcon } from './ProgressIcon';
@@ -41,18 +41,10 @@ export const Ups: React.FC<UpsProgressProps> = (props) => {
                 {!outlined && (
                     <>
                         <Path opacity={backgroundColor ? 1 : 0.3} d={basePath} fill={backgroundColor || color} />
-                        <Mask
-                            id="mask-filled"
-                            mask-type="alpha"
-                            // maskUnits="userSpaceOnUse"
-                            x={20}
-                            y={20}
-                            width={200}
-                            height={200}
-                        >
-                            <Path d={basePath} fill={color} />
-                        </Mask>
-                        <G mask="url(#mask-filled)">
+                        <ClipPath id="ups-filled">
+                            <Path d={basePath} />
+                        </ClipPath>
+                        <G clipPath="url(#ups-filled)">
                             <Rect x={20} y={startY} width={200} height={fillHeight} fill={color} />
                         </G>
                     </>

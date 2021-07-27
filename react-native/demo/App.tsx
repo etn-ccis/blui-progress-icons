@@ -9,8 +9,8 @@ import * as Colors from '@pxblue/colors';
 // const backgroundImage = require('./assets/images/farm.jpg');
 const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: I18nManager.isRTL });
 
-type LabelPosition = undefined | 'top' | 'right' | 'bottom' | 'left';
-const positions: LabelPosition[] = [undefined, 'left', 'top', 'right', 'bottom'];
+type LabelPosition = 'center' | 'top' | 'right' | 'bottom' | 'left';
+const positions: LabelPosition[] = ['center' , 'left', 'top', 'right', 'bottom'];
 
 export const App: React.FC = () => {
     const theme = useTheme();
@@ -39,7 +39,7 @@ export const App: React.FC = () => {
                 <>
                     {positions.map((alignment, posIndex) => (
                         <View key={`position-${posIndex}`}>
-                            <Text style={{ fontSize: 36 }}>{(alignment || 'Center').toUpperCase()}</Text>
+                            <Text style={{ fontSize: 36 }}>{alignment.toUpperCase()}</Text>
                             {[24, 36, 48, 72, 120, 240].map((size, fontSizeIndex) => (
                                 <View key={`${String(alignment)}-${fontSizeIndex}`}>
                                     <Text style={{ fontSize: 24 }}>{`${size}px`}</Text>
