@@ -40,6 +40,12 @@ const useStyles = (
     });
 };
 
+/**
+ * [Progress Icon ](https://github.com/pxblue/progress-icons/tree/master/react-native)
+ *
+ * @param props ProgressIconProps
+ * @returns A wrapper around a progress icon for handling label positioning
+ */
 export const ProgressIcon: React.FC<ProgressIconProps> = (props) => {
     const { showPercentLabel, labelPosition = 'center', children, percent, styles = {} } = props;
     const defaultStyles = useStyles(props);
@@ -54,8 +60,9 @@ export const ProgressIcon: React.FC<ProgressIconProps> = (props) => {
                 return 'column';
             case 'bottom':
                 return 'column-reverse';
+            case 'center':
             default:
-                return '';
+                return 'row';
         }
     };
 
