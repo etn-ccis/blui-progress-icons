@@ -20,4 +20,4 @@ For detailed usage, please follow the guidance for each framework:
 
 ## Previous Releases
 
-Past releases of the `@brightlayer-ui/ng-progress-icons` and `@brightlayer-ui/react-progress-icons` can be located in the PX Blue [icons](https://github.com/brightlayer-ui/icons/releases) repo.
+Past releases of the `@brightlayer-ui/ng-progress-icons` and `@brightlayer-ui/react-progress-icons` can be located in the Brightlayer UI [icons](https://github.com/brightlayer-ui/icons/releases) repo.
