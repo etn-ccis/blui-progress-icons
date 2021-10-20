@@ -9,7 +9,7 @@
  * Public API Surface of ng-progress-icons
  */
 
-export * from './lib/pxb-progress-icon.component';
+export * from './lib/blui-progress-icon.component';
 export * from './lib/ng-progress-icons.module';
 
 export * from './lib/battery/battery.component';

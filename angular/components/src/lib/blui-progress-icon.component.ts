@@ -2,16 +2,16 @@ import { Component, Input, OnChanges } from '@angular/core';
 import color from 'color';
 
 @Component({
-    selector: 'pxb-progress-icon',
+    selector: 'blui-progress-icon',
     template: `
         <span
-            class="pxb-progress-icon"
+            class="blui"
             [style.flexDirection]="getFlexDirection()"
             [style.display]="labelPosition === 'center' ? '' : 'inline-flex'"
         >
             <span
                 *ngIf="showPercentLabel"
-                class="pxb-progress-icon-label"
+                class="blui-progress-icon-label"
                 [class.inverted]="inverted"
                 [class.center]="labelPosition === 'center'"
                 [style.color]="labelColor"
@@ -27,9 +27,9 @@ import color from 'color';
             <ng-content></ng-content>
         </span>
     `,
-    styleUrls: ['./pxb-progress-icon.scss'],
+    styleUrls: ['./blui-progress-icon.scss'],
 })
-export class PxbProgressIconComponent implements OnChanges {
+export class BluiProgressIconComponent implements OnChanges {
     @Input() size = 24;
     @Input() percent = 100;
     @Input() showPercentLabel = false;

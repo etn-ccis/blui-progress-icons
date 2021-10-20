@@ -717,6 +717,21 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@brightlayer-ui/eslint-config@^2.0.4":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/eslint-config/-/eslint-config-2.0.5.tgz#b7ee0c47f4669d2ecefc45d5fc37d7a9e209ccc9"
+  integrity sha512-qUxNX/1z+cmBWzbOeFftxGD7SPT+xkT1rUj++xsZjIQajEkwF1Ka+0mRlSY5qqAsQpRLGDCHDszx8uztmSm1lA==
+  dependencies:
+    "@typescript-eslint/parser" "^4.8.0"
+    eslint-config-prettier ">= 6.3.0"
+  optionalDependencies:
+    eslint-plugin-react "^7.16.0"
+
+"@brightlayer-ui/prettier-config@^1.0.2":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/prettier-config/-/prettier-config-1.0.3.tgz#e40a7ae7435c6fd5118acbf249080e0aa81e93af"
+  integrity sha512-EYm3+V7Qd+oYEF+8FadsXAZqXryEHHbGnrV1BMp9selhABjceqUqXPVE4Sn3SKWQdBNJ3En2A3EzgrzRbvRTaw==
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -999,21 +1014,6 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
-
-"@pxblue/eslint-config@^2.0.4":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@pxblue/eslint-config/-/eslint-config-2.0.5.tgz#2c9f9156175cd99aef2d579e834716f3c0877c93"
-  integrity sha512-nkFi1CSD37OutixMlapg5zPJ3HE+RyokgYmR4J7Uput5Jp6MIzvUw+YeRCT0KWOoWq5snTxyUvIA0ANuX/sXig==
-  dependencies:
-    "@typescript-eslint/parser" "^4.8.0"
-    eslint-config-prettier ">= 6.3.0"
-  optionalDependencies:
-    eslint-plugin-react "^7.16.0"
-
-"@pxblue/prettier-config@^1.0.2":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.3.tgz#285b9ba346f714d397ef4a59579443b95a77e63e"
-  integrity sha512-x9SDup4pf5H54r/stZBXz7/XlMcIqnwHkEJ+9pyXVtGyQljI28lDGQCWQj6heipWAett50yx0RB3P2+MWZDhJA==
 
 "@react-native-community/cli-debugger-ui@^5.0.1":
   version "5.0.1"
