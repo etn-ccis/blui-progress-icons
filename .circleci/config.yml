@@ -9,7 +9,7 @@ jobs:
             - checkout
             - restore_cache:
                   keys:
-                      - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/icons/package.json" }}
+                      - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
                       - v1-dependencies-
             - run:
                   name: Install Dependencies
