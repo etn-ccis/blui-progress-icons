@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.1 (Not yet published)
+
+### Changed
+
+-   Changed package namespace from `@pxblue` to `@brightlayer-ui`.
+
+## Package Migration Notice
+
+Previous versions listed after this indicator refer to our deprecated `@pxblue` packages.
+
+---
+
 ## v1.2.1 (October 27, 2020)
 
 ### Changed

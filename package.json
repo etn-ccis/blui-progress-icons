@@ -1,8 +1,8 @@
 {
-    "name": "px-blue-progress-icons",
+    "name": "brightlayer-ui-progress-icons",
     "version": "0.0.0",
-    "description": "Px Blue progress icons",
-    "author": "PX Blue <pxblue@eaton.com>",
+    "description": "Brightlayer UI progress icons",
+    "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
     "scripts": {
         "test:demo-angular": "cd angular/demos/showcase && yarn test:ci && cd ../../..",

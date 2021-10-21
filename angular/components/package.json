@@ -1,8 +1,8 @@
 {
-    "name": "@pxblue/ng-progress-icons",
+    "name": "@brightlayer-ui/ng-progress-icons",
     "version": "1.2.1",
-    "description": "Angular progress icons for PX Blue applications",
-    "main": "bundles/pxblue-ng-progress-icons.umd.js",
+    "description": "Angular progress icons for Brightlayer UI applications",
+    "main": "bundles/brightlayer-ui-ng-progress-icons.umd.js",
     "scripts": {
         "build": "rm -rf ../dist && yarn && ng build && cp ../README.md ../dist",
         "test": "ng test",
@@ -11,8 +11,8 @@
         "prettier:check": "prettier \"src/**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --check",
         "lint": "eslint \"src/**/**.ts\"",
         "lint:fix": "eslint \"src/**/**.ts\" --fix",
-        "publish:package": "cd ../dist && set npm_config_yes=true && npx -p @pxblue/publish pxb-publish",
-        "tag:package": "npx -p @pxblue/tag pxb-tag"
+        "publish:package": "cd ../dist && set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
+        "tag:package": "npx -p @brightlayer-ui/tag blui-tag -s -blui-ng-progress-icons"
     },
     "dependencies": {
         "color": "^3.1.2"
@@ -30,8 +30,8 @@
         "@angular/language-service": "^8.1.2",
         "@angular/platform-browser": "^8.1.2",
         "@angular/platform-browser-dynamic": "^8.1.2",
-        "@pxblue/eslint-config": "^2.0.2",
-        "@pxblue/prettier-config": "^1.0.2",
+        "@brightlayer-ui/eslint-config": "^2.0.2",
+        "@brightlayer-ui/prettier-config": "^1.0.2",
         "@types/jasmine": "~3.3.14",
         "@types/jasminewd2": "~2.0.3",
         "@types/node": "~12.6.8",
@@ -64,27 +64,27 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/pxblue/icons.git"
+        "url": "git+https://github.com/brightlayer-ui/icons.git"
     },
     "keywords": [
         "progress",
         "icons",
-        "pxblue"
+        "brightlayer-ui"
     ],
-    "author": "pxblue <pxblue@eaton.com>",
+    "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
     "bugs": {
-        "url": "https://github.com/pxblue/icons/issues"
+        "url": "https://github.com/brightlayer-ui/icons/issues"
     },
-    "homepage": "https://github.com/pxblue/icons#readme",
-    "module": "fesm5/pxblue-ng-progress-icons.js",
-    "es2015": "fesm2015/pxblue-ng-progress-icons.js",
-    "esm5": "esm5/pxblue-ng-progress-icons.js",
-    "esm2015": "esm2015/pxblue-ng-progress-icons.js",
-    "fesm5": "fesm5/pxblue-ng-progress-icons.js",
-    "fesm2015": "fesm2015/pxblue-ng-progress-icons.js",
-    "typings": "pxblue-ng-progress-icons.d.ts",
-    "metadata": "pxblue-ng-progress-icons.metadata.json",
+    "homepage": "https://github.com/brightlayer-ui/icons#readme",
+    "module": "fesm5/brightlayer-ui-ng-progress-icons.js",
+    "es2015": "fesm2015/brightlayer-ui-ng-progress-icons.js",
+    "esm5": "esm5/brightlayer-ui-ng-progress-icons.js",
+    "esm2015": "esm2015/brightlayer-ui-ng-progress-icons.js",
+    "fesm5": "fesm5/brightlayer-ui-ng-progress-icons.js",
+    "fesm2015": "fesm2015/brightlayer-ui-ng-progress-icons.js",
+    "typings": "brightlayer-ui-ng-progress-icons.d.ts",
+    "metadata": "brightlayer-ui-ng-progress-icons.metadata.json",
     "sideEffects": false,
-    "prettier": "@pxblue/prettier-config"
+    "prettier": "@brightlayer-ui/prettier-config"
 }

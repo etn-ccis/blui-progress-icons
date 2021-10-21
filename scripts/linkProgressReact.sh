@@ -16,23 +16,23 @@ cd ../demo && yarn
 cd ..
 
 echo -en "${BLUE}Creating new folder in node_modules...${NC}"
-if [ -f ./demo/node_modules/@pxblue/react-progress-icons/package.json ]; then rm -rf "./demo/node_modules/@pxblue/react-progress-icons"; fi
-mkdir -p "./demo/node_modules/@pxblue/react-progress-icons"
+if [ -f ./demo/node_modules/@brightlayer-ui/react-progress-icons/package.json ]; then rm -rf "./demo/node_modules/@brightlayer-ui/react-progress-icons"; fi
+mkdir -p "./demo/node_modules/@brightlayer-ui/react-progress-icons"
 echo -e "${GREEN}Done${NC}"
 
 echo -en "${BLUE}Copying build output into node_modules...${NC}";
-cp -r ./icons/dist ./demo/node_modules/@pxblue/react-progress-icons/
+cp -r ./icons/dist ./demo/node_modules/@brightlayer-ui/react-progress-icons/
 echo -e "${GREEN}Done${NC}"
 
 echo -en "${BLUE}Copying package.json into node_modules...${NC}";
-cp -r ./icons/package.json ./demo/node_modules/@pxblue/react-progress-icons
+cp -r ./icons/package.json ./demo/node_modules/@brightlayer-ui/react-progress-icons
 echo -e "${GREEN}Done${NC}"
 
 echo -en "\r\n${BLUE}Linking Components: ${NC}"
-if [ ! -f ./demo/node_modules/@pxblue/react-progress-icons/package.json ]; then echo -e "${BRED}Not Linked${NC}" && exit 1; fi
-if [ ! -s ./demo/node_modules/@pxblue/react-progress-icons/dist ];
+if [ ! -f ./demo/node_modules/@brightlayer-ui/react-progress-icons/package.json ]; then echo -e "${BRED}Not Linked${NC}" && exit 1; fi
+if [ ! -s ./demo/node_modules/@brightlayer-ui/react-progress-icons/dist ];
     then
-        if [ ! -f ./demo/node_modules/@pxblue/react-progress-icons/dist/index.js ];
+        if [ ! -f ./demo/node_modules/@brightlayer-ui/react-progress-icons/dist/index.js ];
         then echo -e "${BRED}Not Linked${NC}" && exit 1;
         fi;
 fi
