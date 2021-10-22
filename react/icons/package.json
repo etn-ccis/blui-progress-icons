@@ -1,6 +1,6 @@
 {
     "name": "@brightlayer-ui/react-progress-icons",
-    "version": "2.1.1-beta.0",
+    "version": "2.1.1",
     "description": "React progress icons for Brightlayer UI applications",
     "main": "./dist/index.js",
     "scripts": {

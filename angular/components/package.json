@@ -1,6 +1,6 @@
 {
     "name": "@brightlayer-ui/ng-progress-icons",
-    "version": "1.2.1-beta.0",
+    "version": "1.2.1",
     "description": "Angular progress icons for Brightlayer UI applications",
     "main": "bundles/brightlayer-ui-ng-progress-icons.umd.js",
     "scripts": {
