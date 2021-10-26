@@ -96,14 +96,14 @@ Z
                 style={Object.assign(style, { transform: transform })}
                 {...svgProps}
             >
-                <clipPath id={`pxb-donut-clip-${stroke}`}>
+                <clipPath id={`blui-donut-clip-${stroke}`}>
                     <path d={clipPath} />
                 </clipPath>
                 {outlined && backgroundColor && (
-                    <path d={twoToneBase} clipPath={`url(#pxb-donut-clip-${stroke})`} fill={backgroundColor} />
+                    <path d={twoToneBase} clipPath={`url(#blui-donut-clip-${stroke})`} fill={backgroundColor} />
                 )}
                 <path
-                    clipPath={`url(#pxb-donut-clip-${stroke})`}
+                    clipPath={`url(#blui-donut-clip-${stroke})`}
                     fill={(!outlined && backgroundColor) || color || 'currentColor'}
                     fillOpacity={outlined || percent >= 100 || (!outlined && backgroundColor) ? 1 : 0.3}
                     d={outlined ? outlineBase : twoToneBase}
@@ -111,7 +111,7 @@ Z
                 {rangeValue(percent, 0, 100) > 0 && rangeValue(percent, 0, 100) < 100 && (
                     <path
                         fill={color || 'currentColor'}
-                        clipPath={`url(#pxb-donut-clip-${stroke})`}
+                        clipPath={`url(#blui-donut-clip-${stroke})`}
                         d={`M 12,12 H 24 A 12,12,0,${rangeValue(percent, 0, 100) >= 50 ? 1 : 0},1,${
                             getCoordinates(rangeValue(percent, 0, 100))['x']
                         },${getCoordinates(rangeValue(percent, 0, 100))['y']}Z`}
@@ -119,7 +119,7 @@ Z
                 )}
                 {rangeValue(percent, 0, 100) === 100 && outlined && (
                     <circle
-                        clipPath={`url(#pxb-donut-clip-${stroke})`}
+                        clipPath={`url(#blui-donut-clip-${stroke})`}
                         cx="12"
                         cy="12"
                         r="10"
