@@ -46,13 +46,13 @@ export const Heart: React.FC<HeartProgressProps> = (props) => {
                     fillOpacity={outlined || percent >= 100 || (!outlined && backgroundColor) ? '1' : '0.3'}
                     d={getPath(outlined)}
                 />
-                <clipPath id="pxb-heart-clip">
+                <clipPath id="blui-heart-clip">
                     <path d={basePath} />
                 </clipPath>
                 {percent > 0 && (
                     <rect
                         fill={color || 'currentColor'}
-                        clipPath="url(#pxb-heart-clip)"
+                        clipPath="url(#blui-heart-clip)"
                         x="2"
                         y={startY - (rangeValue(percent, 0, 100) * fillHeight) / 100}
                         width="20"

@@ -96,14 +96,14 @@ Z
                 style={[style, { transform: [{ rotate: '-90deg' }].concat(style.transform || []) }]}
                 {...svgProps}
             >
-                <ClipPath id={`pxb-donut-clip-${stroke}`}>
+                <ClipPath id={`blui-donut-clip-${stroke}`}>
                     <Path d={clipPath} />
                 </ClipPath>
                 {outlined && backgroundColor && (
-                    <Path d={twoToneBase} clipPath={`url(#pxb-donut-clip-${stroke})`} fill={backgroundColor} />
+                    <Path d={twoToneBase} clipPath={`url(#blui-donut-clip-${stroke})`} fill={backgroundColor} />
                 )}
                 <Path
-                    clipPath={`url(#pxb-donut-clip-${stroke})`}
+                    clipPath={`url(#blui-donut-clip-${stroke})`}
                     fill={(!outlined && backgroundColor) || color}
                     fillOpacity={outlined || percent >= 100 || (!outlined && backgroundColor) ? 1 : 0.3}
                     d={outlined ? outlineBase : twoToneBase}
@@ -111,14 +111,14 @@ Z
                 {rangeValue(percent, 0, 100) > 0 && rangeValue(percent, 0, 100) < 100 && (
                     <Path
                         fill={color}
-                        clipPath={`url(#pxb-donut-clip-${stroke})`}
+                        clipPath={`url(#blui-donut-clip-${stroke})`}
                         d={`M 12,12 H 24 A 12,12,0,${rangeValue(percent, 0, 100) >= 50 ? 1 : 0},1,${
                             getCoordinates(rangeValue(percent, 0, 100))['x']
                         },${getCoordinates(rangeValue(percent, 0, 100))['y']}Z`}
                     />
                 )}
                 {rangeValue(percent, 0, 100) === 100 && outlined && (
-                    <Circle clipPath={`url(#pxb-donut-clip-${stroke})`} cx="12" cy="12" r="10" fill={color}></Circle>
+                    <Circle clipPath={`url(#blui-donut-clip-${stroke})`} cx="12" cy="12" r="10" fill={color}></Circle>
                 )}
             </Svg>
         </ProgressIcon>
