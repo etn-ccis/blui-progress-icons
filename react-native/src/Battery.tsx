@@ -10,8 +10,8 @@ const chargePath =
     'M200,100V83.3a13.19,13.19,0,0,0-10-12.63A12.57,12.57,0,0,0,186.7,70H33.4A13.38,13.38,0,0,0,20,83.3v73.3A13.38,13.38,0,0,0,33.3,170H186.7a12.57,12.57,0,0,0,3.3-.67,13.19,13.19,0,0,0,10-12.63V140h20V100Zm-85,30v20L40,110H95V90L170,130Z';
 const outlinedPath =
     'M180,90v60H40V90H180m7-20H33A13.24,13.24,0,0,0,20,83v73A13.47,13.47,0,0,0,33,170H186a13.24,13.24,0,0,0,13-13V140h20V100H200V83A13.24,13.24,0,0,0,187,70Z';
-const baseID = 'pxb-battery-clip';
-const chargeID = 'pxb-battery-clip-charge';
+const baseID = 'blui-battery-clip';
+const chargeID = 'blui-battery-clip-charge';
 
 const getBasepath = (outlined: boolean): string => (outlined ? outlinedPath : basePath);
 const getClipPath = (charging: boolean): string => (charging ? chargePath : basePath);

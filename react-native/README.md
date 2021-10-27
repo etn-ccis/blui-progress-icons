@@ -1,9 +1,9 @@
-# PX Blue React Native Progress Icons
+# Brightlayer UI React Native Progress Icons
 
-[![](https://img.shields.io/npm/v/@pxblue/react-native-progress-icons.svg?label=@pxblue/react-native-progress-icons&style=flat)](https://www.npmjs.com/package/@pxblue/react-native-progress-icons)
-[![](https://img.shields.io/circleci/project/github/pxblue/progress-icons/master.svg?style=flat)](https://circleci.com/gh/pxblue/progress-icons/tree/master)
+[![](https://img.shields.io/npm/v/@brightlayer-ui/react-native-progress-icons.svg?label=@brightlayer-ui/react-native-progress-icons&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-native-progress-icons)
+[![](https://img.shields.io/circleci/project/github/brightlayer-ui/progress-icons/master.svg?style=flat)](https://circleci.com/gh/brightlayer-ui/progress-icons/tree/master)
 
-<img width="100%" style="max-width: 600px" alt="Progress icons" src="https://raw.githubusercontent.com/pxblue/progress-icons/master/assets/progress-icons.png" />
+<img width="100%" style="max-width: 600px" alt="Progress icons" src="https://raw.githubusercontent.com/brightlayer-ui/progress-icons/master/assets/progress-icons.png" />
 
 This is a library of icons with dynamic fill capabilities that can be used to show progress (similar to a traditional progress spinner or bar). These can be used to show health, battery life, etc.
 
@@ -16,10 +16,10 @@ Currently, we have icons available for:
 
 ## Installation
 
-To install the PX Blue progress icons from NPM as a dependency for your project, you can run the following command in your project root:
+To install the Brightlayer UI progress icons from NPM as a dependency for your project, you can run the following command in your project root:
 
 ```sh
-yarn add @pxblue/react-native-progress-icons
+yarn add @brightlayer-ui/react-native-progress-icons
 ```
 
 ### Peer Dependencies
@@ -35,7 +35,7 @@ yarn add react-native-svg
 The progress icon components can be imported and used like you would use any other component.
 
 ```tsx
-import {Battery, Heart, Pie} from '@pxblue/react-native-progress-icons';
+import {Battery, Heart, Pie} from '@brightlayer-ui/react-native-progress-icons';
 ...
 <Battery color={'blue'} percent={100} size={36} color={'green'} charging={true} outlined={true}/>
 <Heart color={'red'} percent={50} size={18} color={'pink'} outlined={true}/>

@@ -1,11 +1,11 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { rangeValue } from '../utilities';
-import { PxbProgressIconComponent } from '../pxb-progress-icon.component';
+import { BluiProgressIconComponent } from '../blui-progress-icon.component';
 
 @Component({
     selector: 'ups-progress',
     template: `
-        <pxb-progress-icon
+        <blui-progress-icon
             [size]="size"
             [labelPosition]="labelPosition"
             [percent]="percent"
@@ -73,11 +73,11 @@ import { PxbProgressIconComponent } from '../pxb-progress-icon.component';
                     />
                 </g>
             </svg>
-        </pxb-progress-icon>
+        </blui-progress-icon>
     `,
-    styleUrls: ['../pxb-progress-icon.scss'],
+    styleUrls: ['../blui-progress-icon.scss'],
 })
-export class UpsComponent extends PxbProgressIconComponent implements OnChanges {
+export class UpsComponent extends BluiProgressIconComponent implements OnChanges {
     @Input() outlined = false;
 
     rangedPercent: number;
