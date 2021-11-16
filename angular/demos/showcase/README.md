@@ -1,6 +1,6 @@
 # Angular Progress Icon Showcase
 
-This application is a demonstration for the package `@pxblue/ng-progress-icons`. 
+This application is a demonstration for the package `@brightlayer-ui/ng-progress-icons`. 
 
 ## Run
 

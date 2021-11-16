@@ -7,7 +7,7 @@ import React from 'react';
 import { AppRegistry } from 'react-native';
 import { App } from './App';
 import { Provider as PaperProvider } from 'react-native-paper';
-import { blue } from '@pxblue/react-native-themes';
+import { blue } from '@brightlayer-ui/react-native-themes';
 
 const wrapper = (): JSX.Element => (
     <PaperProvider theme={blue}>

@@ -1,10 +1,10 @@
 import React, { /*useEffect,*/ useState } from 'react';
 import { ScrollView, View, I18nManager, Text } from 'react-native';
-import { Header, Spacer, wrapIcon } from '@pxblue/react-native-components';
+import { Header, Spacer, wrapIcon } from '@brightlayer-ui/react-native-components';
 import { useTheme } from 'react-native-paper';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
-import { Battery, Heart, Ups, Pie } from '@pxblue/react-native-progress-icons';
-import * as Colors from '@pxblue/colors';
+import { Battery, Heart, Ups, Pie } from '@brightlayer-ui/react-native-progress-icons';
+import * as Colors from '@brightlayer-ui/colors';
 
 // const backgroundImage = require('./assets/images/farm.jpg');
 const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: I18nManager.isRTL });

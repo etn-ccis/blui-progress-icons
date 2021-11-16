@@ -2,11 +2,11 @@
   "name": "demo",
   "version": "0.1.0",
   "private": true,
-  "prettier": "@pxblue/prettier-config",
+  "prettier": "@brightlayer-ui/prettier-config",
   "dependencies": {
     "@material-ui/core": "^4.0.0",
-    "@pxblue/react-progress-icons": "^2.1.0",
-    "@pxblue/react-themes": "^6.0.0",
+    "@brightlayer-ui/react-progress-icons": "^2.1.0",
+    "@brightlayer-ui/react-themes": "^6.0.0",
     "@testing-library/jest-dom": "^5.0.0",
     "@testing-library/react": "^11.0.0",
     "@testing-library/user-event": "^13.0.0",
@@ -48,8 +48,8 @@
     ]
   },
   "devDependencies": {
-    "@pxblue/eslint-config": "^2.0.2",
-    "@pxblue/prettier-config": "^1.0.2",
+    "@brightlayer-ui/eslint-config": "^2.0.2",
+    "@brightlayer-ui/prettier-config": "^1.0.2",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
     "eslint": "^7.0.0",
