@@ -1,5 +1,5 @@
 import React from 'react';
-import { Battery, Ups, Pie, Heart } from '@pxblue/react-progress-icons';
+import { Battery, Ups, Pie, Heart } from '@brightlayer-ui/react-progress-icons';
 
 type LabelPosition = undefined | 'top' | 'right' | 'bottom' | 'left';
 const positions: LabelPosition[] = [undefined, 'left', 'top', 'right', 'bottom'];

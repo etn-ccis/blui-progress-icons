@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { NgProgressIconsModule } from '@pxblue/ng-progress-icons';
+import { NgProgressIconsModule } from '@brightlayer-ui/ng-progress-icons';
 
 describe('AppComponent', () => {
     beforeEach(async(() => {
