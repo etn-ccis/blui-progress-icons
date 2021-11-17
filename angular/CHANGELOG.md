@@ -43,4 +43,4 @@ Breaking changes:
 -   Progress Icons are no longer imported individually in your app.module.ts file
 -   The new usage imports a single progress icon module
 
-Instead import {NgProgressIconsModule} from '@pxblue/ng-progress-icons' and place that module in your imports array
+Instead import {NgProgressIconsModule} from '@brightlayer-ui/ng-progress-icons' and place that module in your imports array

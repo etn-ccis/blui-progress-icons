@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgProgressIconsModule } from '@pxblue/ng-progress-icons';
+import { NgProgressIconsModule } from '@brightlayer-ui/ng-progress-icons';
 
 import { AppComponent } from './app.component';
 
