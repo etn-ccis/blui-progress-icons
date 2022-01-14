@@ -64,7 +64,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/brightlayer-ui/icons.git"
+        "url": "git+https://github.com/brightlayer-ui/progress-icons.git"
     },
     "keywords": [
         "progress",
@@ -74,9 +74,9 @@
     "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
     "bugs": {
-        "url": "https://github.com/brightlayer-ui/icons/issues"
+        "url": "https://github.com/brightlayer-ui/progress-icons/issues"
     },
-    "homepage": "https://github.com/brightlayer-ui/icons#readme",
+    "homepage": "https://github.com/brightlayer-ui/progress-icons#readme",
     "module": "fesm5/brightlayer-ui-ng-progress-icons.js",
     "es2015": "fesm2015/brightlayer-ui-ng-progress-icons.js",
     "esm5": "esm5/brightlayer-ui-ng-progress-icons.js",
