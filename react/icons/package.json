@@ -55,7 +55,8 @@
     "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
     "bugs": {
-        "url": "https://github.com/brightlayer-ui/progress-icons/issues",
+        "url": "https://github.com/brightlayer-ui/progress-icons/issues"
+    },
     "files": [
         "dist/",
         "package.json",
