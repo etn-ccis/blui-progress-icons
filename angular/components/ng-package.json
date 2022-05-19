@@ -3,12 +3,9 @@
     "dest": "../dist",
     "deleteDestPath": false,
     "lib": {
-        "entryFile": "src/public_api.ts",
-        "umdModuleIds": {
-            "color": "color"
-        }
+        "entryFile": "src/public_api.ts"
     },
-    "whitelistedNonPeerDependencies": [
+    "allowedNonPeerDependencies": [
         "color"
     ]
 }

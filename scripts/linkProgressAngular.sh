@@ -28,7 +28,7 @@ echo -en "\r\n${BLUE}Linking Components: ${NC}"
 if [ ! -f ./node_modules/@brightlayer-ui/ng-progress-icons/package.json ]; then echo -e "${BRED}Not Linked${NC}" && exit 1; fi
 if [ ! -s ./node_modules/@brightlayer-ui/ng-progress-icons ];
     then
-        if [ ! -f ./node_modules/@brightlayer-ui/ng-progress-icons/bundles/brightlayer-ui-ng-progress-icons.umd.js ];
+        if [ ! -f ./node_modules/@brightlayer-ui/ng-progress-icons/package.json ];
         then echo -e "${BRED}Not Linked${NC}" && exit 1;
         fi;
 fi
