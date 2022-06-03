@@ -1,12 +1,15 @@
 version: 2.1
 orbs:
   gh: circleci/github-cli@1.0.3
+  browser-tools: circleci/browser-tools@1.2.4
 jobs:
     build:
         docker:
-            - image: circleci/node:14.17-browsers
+            - image: cimg/node:14.19.0-browsers
+        resource_class: large
         steps:
             - checkout
+            - browser-tools/install-browser-tools
             - restore_cache:
                   keys:
                       - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
@@ -65,7 +68,7 @@ jobs:
 
     publish:
       docker:
-        - image: circleci/node:14.17-browsers
+        - image: cimg/node:14.19.0-browsers
       steps:
         - checkout
         - attach_workspace:
@@ -87,7 +90,7 @@ jobs:
 
     tag:
       docker:
-        - image: circleci/node:14.17-browsers
+        - image: cimg/node:14.19.0-browsers
       steps:
         - checkout
         - gh/setup
