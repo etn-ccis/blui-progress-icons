@@ -41,7 +41,7 @@ const useStyles = (
 };
 
 /**
- * [Progress Icon ](https://github.com/brightlayer-ui/progress-icons/tree/master/react-native)
+ * [Progress Icon ](https://github.com/etn-ccis/blui-progress-icons/tree/master/react-native)
  *
  * @param props ProgressIconProps
  * @returns A wrapper around a progress icon for handling label positioning
