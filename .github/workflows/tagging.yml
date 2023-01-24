@@ -1,0 +1,27 @@
+name: Tagging
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  CURRENT_BRANCH: ${{ github.ref_name }}
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tag-angular-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd angular/components && cp ../CHANGELOG.md CHANGELOG.md && yarn tag:package -b ${CURRENT_BRANCH}
+  tag-react-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd react/icons && yarn tag:package -b ${CURRENT_BRANCH}
+  tag-react-native-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd react-native && yarn tag:package -b ${CURRENT_BRANCH}

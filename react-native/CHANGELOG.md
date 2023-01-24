@@ -16,8 +16,8 @@ Previous versions listed after this indicator refer to our deprecated `@pxblue` 
 
 ### Fixed
 
--   Issue with undefined flexDirection causing crash on Android ([#15](https://github.com/brightlayer-ui/progress-icons/issues/15)).
--   Incorrect fill alignment and color for UPS icon ([#16](https://github.com/brightlayer-ui/progress-icons/issues/16)).
+-   Issue with undefined flexDirection causing crash on Android ([#15](https://github.com/etn-ccis/blui-progress-icons/issues/15)).
+-   Incorrect fill alignment and color for UPS icon ([#16](https://github.com/etn-ccis/blui-progress-icons/issues/16)).
 
 ## v1.0.1 (July 15, 2021)
 

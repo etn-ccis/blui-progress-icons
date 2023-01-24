@@ -4,7 +4,7 @@
 [![](https://img.shields.io/npm/v/@brightlayer-ui/react-progress-icons.svg?label=@brightlayer-ui/react-progress-icons&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-progress-icons)
 [![](https://img.shields.io/npm/v/@brightlayer-ui/react-native-progress-icons.svg?label=@brightlayer-ui/react-native-progress-icons&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-native-progress-icons)
 
-<img width="100%" style="max-width: 600px" alt="Progress icons" src="https://raw.githubusercontent.com/brightlayer-ui/progress-icons/master/assets/progress-icons.png" />
+<img width="100%" style="max-width: 600px" alt="Progress icons" src="https://raw.githubusercontent.com/etn-ccis/blui-progress-icons/master/assets/progress-icons.png" />
 
 This is a library of icons with dynamic fill capabilities that can be used to show progress (similar to a traditional progress spinner or bar). These can be used to show health, battery life, etc.
 
