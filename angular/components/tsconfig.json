@@ -9,17 +9,23 @@
         ]
       },
     "compilerOptions": {
-        "baseUrl": ".",
-        "sourceMap": true,
-        "declaration": false,
-        "module": "es2015",
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "importHelpers": true,
-        "target": "es2015",
-        "typeRoots": ["node_modules/@types"],
-        "lib": ["es2018", "dom"]
+      "baseUrl": ".",
+      "sourceMap": true,
+      "declaration": false,
+      "module": "es2015",
+      "moduleResolution": "node",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "importHelpers": true,
+      "target": "ES2022",
+      "typeRoots": [
+        "node_modules/@types"
+      ],
+      "lib": [
+        "es2018",
+        "dom"
+      ],
+      "useDefineForClassFields": false
     },
     "include": ["src"]
 }
