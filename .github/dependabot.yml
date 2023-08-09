@@ -9,7 +9,6 @@ updates:
       target-branch: 'dev'
       labels:
           - 'external-dependency'
-          - 'brightlayer-ui'
 
     - package-ecosystem: 'npm'
       directory: '/angular'
@@ -20,7 +19,6 @@ updates:
       target-branch: 'dev'
       labels:
           - 'external-dependency'
-          - 'brightlayer-ui'
 
     - package-ecosystem: 'npm'
       directory: '/react'
@@ -31,7 +29,6 @@ updates:
       target-branch: 'dev'
       labels:
           - 'external-dependency'
-          - 'brightlayer-ui'
 
     - package-ecosystem: 'npm'
       directory: '/react-native'
@@ -42,4 +39,3 @@ updates:
       target-branch: 'dev'
       labels:
           - 'external-dependency'
-          - 'brightlayer-ui'
