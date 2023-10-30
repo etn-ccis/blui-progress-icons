@@ -1,11 +1,11 @@
 version: 2.1
 orbs:
   gh: circleci/github-cli@1.0.3
-  browser-tools: circleci/browser-tools@1.4.2
+  browser-tools: circleci/browser-tools@1.4.6
 jobs:
     build:
         docker:
-            - image: cimg/node:14.19.0-browsers
+            - image: cimg/node:18.17.0-browsers
         resource_class: large
         steps:
             - checkout
@@ -68,7 +68,7 @@ jobs:
 
     publish:
       docker:
-        - image: cimg/node:14.19.0-browsers
+        - image: cimg/node:18.17.0-browsers
       steps:
         - checkout
         - attach_workspace:
