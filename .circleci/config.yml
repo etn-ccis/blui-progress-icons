@@ -12,8 +12,8 @@ jobs:
             - browser-tools/install-browser-tools
             - restore_cache:
                   keys:
-                      - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
-                      - v1-dependencies-
+                      - v2-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
+                      - v2-dependencies-
             - run:
                   name: Install Dependencies
                   command: |
@@ -36,7 +36,7 @@ jobs:
                       - react/icons/node_modules
                       - angular/components/node_modules
                       - react-native/node_modules
-                  key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
+                  key: v2-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
             - run:
                   name: Prettier Check
                   command: |
