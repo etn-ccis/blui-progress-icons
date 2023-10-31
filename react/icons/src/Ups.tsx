@@ -46,6 +46,7 @@ export const Ups: React.FC<UpsProgressProps> = (props) => {
                         />
                         <mask
                             id="mask-filled"
+                            /* eslint-disable react/no-unknown-property */
                             mask-type="alpha"
                             maskUnits="userSpaceOnUse"
                             x={2}
