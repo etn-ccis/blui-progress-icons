@@ -46,16 +46,16 @@ jobs:
                   command: |
                       yarn lint
             - run:
-                  name: Build Packages
+                  name: Build All Packages
                   command: |
                       yarn build:all
             - run:
-                  name: Test
+                  name: Test All Functions
                   command: |
                       yarn test:functions
                       cd ..
             - run:
-                  name: Build Demos
+                  name: Test All Demos
                   command: |
                       yarn test:demos
                       cd ..
