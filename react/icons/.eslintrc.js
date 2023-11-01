@@ -5,6 +5,7 @@ module.exports =  {
         project: "./tsconfig.json",
     },
     env: {
-        browser: true
+        browser: true,
+        jest: true,
     }
 };
