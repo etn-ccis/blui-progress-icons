@@ -6,8 +6,9 @@
     "license": "BSD-3-Clause",
     "scripts": {
         "test:demo-angular": "cd angular/demos/showcase && yarn test:ci && cd ../../..",
-        "test:demo-react": "echo 'No React Demo Test Script Yet'",
-        "test:demos": "yarn test:demo-angular && yarn test:demo-react",
+        "test:demo-react": "cd react/demo && yarn test",
+        "test:demo-react-native": "cd react-native/demo && yarn test",
+        "test:demos": "yarn test:demo-angular && yarn test:demo-react && yarn test:demo-react-native",
         "test:functions-angular": "cd angular/components && yarn test:ci && cd ../..",
         "test:functions-react": "cd react/icons && yarn test && cd ..",
         "test:functions-react-native": "cd react-native && yarn test:functions && cd ..",
