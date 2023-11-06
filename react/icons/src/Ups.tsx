@@ -46,12 +46,14 @@ export const Ups: React.FC<UpsProgressProps> = (props) => {
                         />
                         <mask
                             id="mask-filled"
-                            mask-type="alpha"
                             maskUnits="userSpaceOnUse"
                             x={2}
                             y={2}
                             width={20}
                             height={20}
+                            style={{
+                                maskType: 'alpha',
+                            }}
                         >
                             <path d={basePath} fill={color || 'currentColor'} />
                         </mask>

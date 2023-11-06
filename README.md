@@ -14,9 +14,9 @@ The progress icon components can be imported and used like you would use any oth
 
 For detailed usage, please follow the guidance for each framework:
 
--   [Angular](https://github.com/etn-ccis/blui-progress-icons/blob/master/angular/README.md)
--   [React](https://github.com/etn-ccis/blui-progress-icons/blob/master/react/icons/README.md)
--   [React Native](https://github.com/etn-ccis/blui-progress-icons/blob/master/react-native/README.md)
+- [Angular](https://github.com/etn-ccis/blui-progress-icons/blob/master/angular/README.md)
+- [React](https://github.com/etn-ccis/blui-progress-icons/blob/master/react/README.md)
+- [React Native](https://github.com/etn-ccis/blui-progress-icons/blob/master/react-native/README.md)
 
 ## Previous Releases
 

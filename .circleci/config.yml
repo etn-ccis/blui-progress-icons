@@ -1,19 +1,19 @@
 version: 2.1
 orbs:
   gh: circleci/github-cli@1.0.3
-  browser-tools: circleci/browser-tools@1.2.4
+  browser-tools: circleci/browser-tools@1.4.6
 jobs:
     build:
         docker:
-            - image: cimg/node:14.19.0-browsers
+            - image: cimg/node:18.17.0-browsers
         resource_class: large
         steps:
             - checkout
             - browser-tools/install-browser-tools
             - restore_cache:
                   keys:
-                      - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
-                      - v1-dependencies-
+                      - v2-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
+                      - v2-dependencies-
             - run:
                   name: Install Dependencies
                   command: |
@@ -36,7 +36,7 @@ jobs:
                       - react/icons/node_modules
                       - angular/components/node_modules
                       - react-native/node_modules
-                  key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
+                  key: v2-dependencies-{{ checksum "package.json" }}-{{ checksum "./angular/components/package.json" }}-{{ checksum "./react/icons/package.json" }}-{{ checksum "./react-native/package.json" }}
             - run:
                   name: Prettier Check
                   command: |
@@ -46,16 +46,16 @@ jobs:
                   command: |
                       yarn lint
             - run:
-                  name: Build Packages
+                  name: Build All Packages
                   command: |
                       yarn build:all
             - run:
-                  name: Test
+                  name: Test All Functions
                   command: |
                       yarn test:functions
                       cd ..
             - run:
-                  name: Build Demos
+                  name: Test All Demos
                   command: |
                       yarn test:demos
                       cd ..
@@ -68,7 +68,7 @@ jobs:
 
     publish:
       docker:
-        - image: cimg/node:14.19.0-browsers
+        - image: cimg/node:18.17.0-browsers
       steps:
         - checkout
         - attach_workspace:
