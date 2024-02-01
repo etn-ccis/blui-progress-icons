@@ -63,7 +63,7 @@
         "@typescript-eslint/eslint-plugin": "^4.8.0",
         "@typescript-eslint/parser": "^4.8.0",
         "eslint": "^7.0.0",
-        "eslint-config-prettier": "^6.9.0",
+        "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-react": "^7.17.0",
         "faker": "^4.1.0",
         "identity-obj-proxy": "^3.0.0",
