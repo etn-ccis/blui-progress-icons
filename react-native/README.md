@@ -8,10 +8,10 @@ This is a library of icons with dynamic fill capabilities that can be used to sh
 
 Currently, we have icons available for:
 
--   battery
--   heart
--   pie
--   ups
+- battery
+- heart
+- pie
+- ups
 
 ## Installation
 

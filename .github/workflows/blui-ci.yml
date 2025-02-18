@@ -2,14 +2,14 @@ name: Build
 
 on:
   push:
-    branches: [ "dev", "master" ]
+    branches: ["dev", "master"]
   pull_request:
-    branches: [ "dev", "master" ]
+    branches: ["dev", "master"]
   pull_request_target:
     types:
       - opened
     branches:
-      - '*/*'
+      - "*/*"
 
 permissions:
   pull-requests: write
@@ -24,132 +24,132 @@ jobs:
         node-version: [18.x]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install --immutable
-      working-directory: angular/components
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install --immutable
-      working-directory: angular/demos/showcase
-    - run: yarn prettier:check
-      working-directory: angular/components
-    - run: yarn prettier:check
-      working-directory: angular/demos/showcase
-    - run: yarn lint
-      working-directory: angular/components
-    - run: yarn lint
-      working-directory: angular/demos/showcase
-    - run: yarn test:ci
-      working-directory: angular/components
-    - run: yarn test:ci
-      working-directory: angular/demos/showcase
-    - run: yarn build
-      working-directory: angular/components
-    - name: Save angular progress icon build
-      uses: actions/upload-artifact@v3
-      with:
-        name: angular-dist
-        if-no-files-found: error
-        path: angular/dist
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+      - run: yarn install --immutable
+        working-directory: angular/components
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+      - run: yarn install --immutable
+        working-directory: angular/demos/showcase
+      - run: yarn prettier:check
+        working-directory: angular/components
+      - run: yarn prettier:check
+        working-directory: angular/demos/showcase
+      - run: yarn lint
+        working-directory: angular/components
+      - run: yarn lint
+        working-directory: angular/demos/showcase
+      - run: yarn test:ci
+        working-directory: angular/components
+      - run: yarn test:ci
+        working-directory: angular/demos/showcase
+      - run: yarn build
+        working-directory: angular/components
+      - name: Save angular progress icon build
+        uses: actions/upload-artifact@v4
+        with:
+          name: angular-dist
+          if-no-files-found: error
+          path: angular/dist
 
   react_progress_icons:
     runs-on: ubuntu-latest
-      
+
     strategy:
       matrix:
         node-version: [18.x]
-      
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install --immutable
-      working-directory: react/icons
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install --immutable
-      working-directory: react/demo
-    - run: yarn prettier:check
-      working-directory: react/icons
-    - run: yarn prettier:check
-      working-directory: react/demo
-    - run: yarn lint
-      working-directory: react/icons
-    - run: yarn lint
-      working-directory: react/demo
-    - run: yarn test
-      working-directory: react/icons
-    - run: yarn test
-      working-directory: react/demo
-    - run: yarn build
-      working-directory: react/icons
-    - name: Save react progress icon build
-      uses: actions/upload-artifact@v3
-      with:
-        name: react-dist
-        if-no-files-found: error
-        path: react/icons/dist
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+      - run: yarn install --immutable
+        working-directory: react/icons
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+      - run: yarn install --immutable
+        working-directory: react/demo
+      - run: yarn prettier:check
+        working-directory: react/icons
+      - run: yarn prettier:check
+        working-directory: react/demo
+      - run: yarn lint
+        working-directory: react/icons
+      - run: yarn lint
+        working-directory: react/demo
+      - run: yarn test
+        working-directory: react/icons
+      - run: yarn test
+        working-directory: react/demo
+      - run: yarn build
+        working-directory: react/icons
+      - name: Save react progress icon build
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-dist
+          if-no-files-found: error
+          path: react/icons/dist
 
   rn_progress_icons:
     runs-on: ubuntu-latest
-            
+
     strategy:
       matrix:
         node-version: [18.x]
-            
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install --immutable
-      working-directory: react-native
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install --immutable
-      working-directory: react-native/demo
-    - run: yarn prettier:check
-      working-directory: react-native
-    - run: yarn prettier:check
-      working-directory: react-native/demo
-    - run: yarn lint
-      working-directory: react-native
-    - run: yarn lint
-      working-directory: react-native/demo
-    - run: yarn test
-      working-directory: react-native
-    - run: yarn test
-      working-directory: react-native/demo
-    - run: yarn build
-      working-directory: react-native
-    - name: Save rn progress icon build
-      uses: actions/upload-artifact@v3
-      with:
-        name: rn-dist
-        if-no-files-found: error
-        path: react-native/dist
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+      - run: yarn install --immutable
+        working-directory: react-native
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
+      - run: yarn install --immutable
+        working-directory: react-native/demo
+      - run: yarn prettier:check
+        working-directory: react-native
+      - run: yarn prettier:check
+        working-directory: react-native/demo
+      - run: yarn lint
+        working-directory: react-native
+      - run: yarn lint
+        working-directory: react-native/demo
+      - run: yarn test
+        working-directory: react-native
+      - run: yarn test
+        working-directory: react-native/demo
+      - run: yarn build
+        working-directory: react-native
+      - name: Save rn progress icon build
+        uses: actions/upload-artifact@v4
+        with:
+          name: rn-dist
+          if-no-files-found: error
+          path: react-native/dist
 
   publish_angular_progress_icons:
     runs-on: ubuntu-latest
@@ -164,14 +164,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Download angular progress icons package
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: angular-dist
           path: angular/dist
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
       - run: yarn --immutable
         working-directory: angular/components
       - run: npm run publish:package -- -b ${{env.BRANCH}}
@@ -190,14 +190,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Download react progress icons package
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: react-dist
           path: react/icons/dist
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
       - run: yarn --immutable
         working-directory: react/icons
       - run: npm run publish:package -- -b ${{env.BRANCH}}
@@ -216,14 +216,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Download react progress icons package
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: rn-dist
           path: react-native/dist
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
       - run: yarn --immutable
         working-directory: react-native
       - run: npm run publish:package -- -b ${{env.BRANCH}}
