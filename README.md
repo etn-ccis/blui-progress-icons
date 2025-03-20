@@ -16,8 +16,12 @@ For detailed usage, please follow the guidance for each framework:
 
 - [Angular](https://github.com/etn-ccis/blui-progress-icons/blob/master/angular/README.md)
 - [React](https://github.com/etn-ccis/blui-progress-icons/blob/master/react/README.md)
-- [React Native](https://github.com/etn-ccis/blui-progress-icons/blob/master/react-native/README.md)
 
 ## Previous Releases
 
 Past releases of the `@brightlayer-ui/ng-progress-icons` and `@brightlayer-ui/react-progress-icons` can be located in the Brightlayer UI [icons](https://github.com/etn-ccis/blui-icons/releases) repo.
+
+
+> **Important Migration Notice:**
+>
+> The React Native Progress Icons has been migrated to a monorepo to consolidate All the React Native libraries developed by Brightlayer Team into a single workspace. Future development and updates will now occur in the following location: [https://github.com/etn-ccis/blui-react-native/tree/dev/packages/progress-icons]. Please update your bookmarks and contribute to the monorepo for the latest changes.
