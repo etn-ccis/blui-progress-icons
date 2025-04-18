@@ -20,7 +20,6 @@ build.bundle
 /tmp
 angular/dist
 react/icons/dist
-react-native/dist
 
 # misc
 .DS_Store

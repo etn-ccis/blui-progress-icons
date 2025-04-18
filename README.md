@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/npm/v/@brightlayer-ui/ng-progress-icons.svg?label=@brightlayer-ui/ng-progress-icons&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/ng-progress-icons)
 [![](https://img.shields.io/npm/v/@brightlayer-ui/react-progress-icons.svg?label=@brightlayer-ui/react-progress-icons&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-progress-icons)
-[![](https://img.shields.io/npm/v/@brightlayer-ui/react-native-progress-icons.svg?label=@brightlayer-ui/react-native-progress-icons&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-native-progress-icons)[![Build](https://github.com/etn-ccis/blui-progress-icons/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-progress-icons/actions/workflows/blui-ci.yml)
+[![Build](https://github.com/etn-ccis/blui-progress-icons/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-progress-icons/actions/workflows/blui-ci.yml)
 
 <img width="100%" style="max-width: 600px" alt="Progress icons" src="https://raw.githubusercontent.com/etn-ccis/blui-progress-icons/master/assets/progress-icons.png" />
 
