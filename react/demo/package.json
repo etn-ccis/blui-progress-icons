@@ -52,7 +52,7 @@
     "@brightlayer-ui/prettier-config": "^1.0.3",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
-    "eslint": "^8.15.0",
+    "eslint": "^9.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.20.6",
     "prettier": "^2.0.5"
