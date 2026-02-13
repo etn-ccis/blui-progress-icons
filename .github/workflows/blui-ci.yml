@@ -95,10 +95,10 @@ jobs:
         working-directory: react/demo
       - run: yarn test
         working-directory: react/icons
-      - run: yarn test
-        working-directory: react/demo
       - run: yarn build
         working-directory: react/icons
+      - run: yarn test
+        working-directory: react/demo
       - name: Save react progress icon build
         uses: actions/upload-artifact@v4
         with:
