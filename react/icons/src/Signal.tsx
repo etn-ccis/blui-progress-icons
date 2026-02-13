@@ -48,12 +48,12 @@ export const Signal: React.FC<SignalProgressProps> = (props) => {
 
             // Create filled triangle within the outline
             return `M${startX} ${startY}L${x} ${y}V${startY}H${startX}Z`;
-        } else {
-            const x = 2 + (rangedPercent / 100) * 20;
-            const y = 22 - (rangedPercent / 100) * 20;
-
-            return `M2 22L${x} ${y}V22H2Z`;
         }
+
+        const x = 2 + (rangedPercent / 100) * 20;
+        const y = 22 - (rangedPercent / 100) * 20;
+
+        return `M2 22L${x} ${y}V22H2Z`;
     };
 
     const fillPath = getFillPath();
