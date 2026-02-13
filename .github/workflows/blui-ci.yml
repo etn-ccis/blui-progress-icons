@@ -97,6 +97,11 @@ jobs:
         working-directory: react/icons
       - run: yarn build
         working-directory: react/icons
+      - name: Link icons to demo
+        run: |
+          mkdir -p react/demo/node_modules/@brightlayer-ui/react-progress-icons
+          cp -r react/icons/dist react/demo/node_modules/@brightlayer-ui/react-progress-icons/
+          cp react/icons/package.json react/demo/node_modules/@brightlayer-ui/react-progress-icons/
       - run: yarn test
         working-directory: react/demo
       - name: Save react progress icon build
