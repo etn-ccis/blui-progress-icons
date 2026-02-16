@@ -7,8 +7,6 @@ import color from 'color';
 const useStyles = createUseStyles({
     progressIcon: {
         position: 'relative',
-        justifyContent: 'center',
-        alignItems: 'center',
     },
     progressIconLabel: {
         display: 'flex',
@@ -61,7 +59,12 @@ export const ProgressIcon: React.FC<ProgressIconProps> = (props) => {
     return (
         <span
             className={defaultClasses.progressIcon}
-            style={{ display: isCentered() ? 'inline-block' : 'inline-flex', flexDirection: getFlexDirection() }}
+            style={{
+                display: isCentered() ? 'inline-block' : 'inline-flex',
+                flexDirection: getFlexDirection(),
+                justifyContent: isCentered() ? 'center' : undefined,
+                alignItems: isCentered() ? 'center' : undefined,
+            }}
         >
             {showPercentLabel && (
                 <span

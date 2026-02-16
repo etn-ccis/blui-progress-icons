@@ -25,3 +25,4 @@ export type BatteryProgressProps = ProgressIconProps & {
     charging?: boolean;
 };
 export type UpsProgressProps = ProgressIconProps;
+export type SignalProgressProps = ProgressIconProps;
