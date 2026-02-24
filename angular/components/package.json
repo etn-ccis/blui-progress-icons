@@ -1,12 +1,12 @@
 {
     "name": "@brightlayer-ui/ng-progress-icons",
-    "version": "2.0.0-beta.0",
+    "version": "2.0.0-beta.1",
     "description": "Angular progress icons for Brightlayer UI applications",
     "main": "bundles/brightlayer-ui-ng-progress-icons.umd.js",
     "scripts": {
         "build": "rm -rf ../dist && yarn && ng build && cp ../README.md ../dist",
         "test": "ng test",
-        "test:ci": "ng test --watch false",
+        "test:ci": "ng test --browsers=ChromeHeadless --watch false",
         "prettier": "prettier \"src/**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --write",
         "prettier:check": "prettier \"src/**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --check",
         "lint": "eslint \"src/**/**.ts\"",

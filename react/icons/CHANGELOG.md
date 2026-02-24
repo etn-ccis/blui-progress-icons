@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.2.0 (february 24, 2026)
+
+### Added
+
+-   Signal strength progress icon (`<Progress.Signal>`).
+
 ## v2.1.1 (October 26, 2021)
 
 ### Changed

@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/npm/v/@brightlayer-ui/ng-progress-icons.svg?label=@brightlayer-ui/ng-progress-icons&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/ng-progress-icons)
 [![](https://img.shields.io/npm/v/@brightlayer-ui/react-progress-icons.svg?label=@brightlayer-ui/react-progress-icons&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-progress-icons)
-[![](https://img.shields.io/npm/v/@brightlayer-ui/react-native-progress-icons.svg?label=@brightlayer-ui/react-native-progress-icons&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-native-progress-icons)
+[![Build](https://github.com/etn-ccis/blui-progress-icons/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-progress-icons/actions/workflows/blui-ci.yml)
 
 <img width="100%" style="max-width: 600px" alt="Progress icons" src="https://raw.githubusercontent.com/etn-ccis/blui-progress-icons/master/assets/progress-icons.png" />
 
@@ -16,8 +16,12 @@ For detailed usage, please follow the guidance for each framework:
 
 - [Angular](https://github.com/etn-ccis/blui-progress-icons/blob/master/angular/README.md)
 - [React](https://github.com/etn-ccis/blui-progress-icons/blob/master/react/README.md)
-- [React Native](https://github.com/etn-ccis/blui-progress-icons/blob/master/react-native/README.md)
 
 ## Previous Releases
 
 Past releases of the `@brightlayer-ui/ng-progress-icons` and `@brightlayer-ui/react-progress-icons` can be located in the Brightlayer UI [icons](https://github.com/etn-ccis/blui-icons/releases) repo.
+
+
+> **Important Migration Notice:**
+>
+> The React Native Progress Icons has been migrated to a monorepo to consolidate All the React Native libraries developed by Brightlayer Team into a single workspace. Future development and updates will now occur in the following location: [https://github.com/etn-ccis/blui-react-native/tree/dev/packages/progress-icons]. Please update your bookmarks and contribute to the monorepo for the latest changes.
