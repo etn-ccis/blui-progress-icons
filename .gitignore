@@ -25,6 +25,7 @@ react/icons/dist
 .DS_Store
 **/**/.DS_Store
 **/**/Thumbs.db
+.env
 .env.local
 .env.development.local
 .env.test.local
