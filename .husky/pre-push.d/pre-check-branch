@@ -3,6 +3,10 @@ LC_ALL=C
 
 local_branch="$(git rev-parse --abbrev-ref HEAD)"
 
+# Skip validation in detached HEAD state (e.g., during rebase)
+if [[ "$local_branch" == "HEAD" ]]; then
+    exit 0
+fi
 # Branch naming convention: <type>/blui-<JIRA-ID>[-optional-description]
 # Examples:
 #   feature/blui-1234
