@@ -46,10 +46,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/css-tokenizer/-/css-tokenizer-3.0.4.tgz#333fedabc3fd1a8e5d0100013731cf19e6a8c5d3"
   integrity sha512-Vd/9EVDiu6PPJt9yAh6roZP6El1xHrdvIVGjyBsHR0RYwNHgL7FJPyIIW4fANJNG6FtyZfvlRPpFI4ZM/lubvw==
 
-"@figma/code-connect@^1.4.4":
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/@figma/code-connect/-/code-connect-1.4.7.tgz#cf9cba1698e2fe4a04a887d58d30731677d993c5"
-  integrity sha512-iWolnm/X/LZVEvbt/D8AQ0IohnNskrTtDcdtGNEZKqUnBh+zDyQQ+m1HnM9+C00NveRbENfhs13QxrTYcOrvEA==
+"@figma/code-connect@^1.4.9":
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/@figma/code-connect/-/code-connect-1.4.9.tgz#d8d70f8a71ac4ca21d474a36d3aa73bcdbf1c403"
+  integrity sha512-Ifan9Kb5oXHAh0wXu0BM8Iy+AEhWM8NoJSTBr3oU0vQTwggleK55CUHnh5zEYl6tQjj83mg6mTo4klDgcgDprg==
   dependencies:
     boxen "5.1.1"
     chalk "^4.1.2"
