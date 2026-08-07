@@ -58,13 +58,7 @@ export const BatteryLarge: React.FC<BatteryLargeProgressProps> = (props) => {
                     )}
                 </defs>
                 {backgroundColor && (
-                    <path
-                        d={outlined ? outlinedPath : basePath}
-                        fill={backgroundColor}
-                        fillRule={outlined ? 'evenodd' : undefined}
-                        clipRule={outlined ? 'evenodd' : undefined}
-                        clipPath={outlined ? undefined : `url(#${clipId})`}
-                    />
+                    <path d={basePath} fill={backgroundColor} clipPath={outlined ? undefined : `url(#${clipId})`} />
                 )}
                 <path
                     d={getBasePath()}
