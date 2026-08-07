@@ -1,5 +1,5 @@
 import React from 'react';
-import { Battery, Ups, Pie, Heart, Signal } from '@brightlayer-ui/react-progress-icons';
+import { Battery, BatteryLarge, Ups, Pie, Heart, Signal } from '@brightlayer-ui/react-progress-icons';
 
 type LabelPosition = undefined | 'top' | 'right' | 'bottom' | 'left';
 const positions: LabelPosition[] = [undefined, 'left', 'top', 'right', 'bottom'];
@@ -53,6 +53,21 @@ export const App = (): any => (
                             color="#f0cb2f"
                             showPercentLabel={true}
                             labelPosition={alignment}
+                        />
+                        <BatteryLarge
+                            percent={64}
+                            size={size}
+                            color="#d916f7"
+                            showPercentLabel={true}
+                            labelPosition={alignment}
+                        />
+                        <BatteryLarge
+                            percent={64}
+                            size={size}
+                            color="#12e7cb"
+                            showPercentLabel={true}
+                            labelPosition={alignment}
+                            outlined
                         />
                         <br />
                     </div>
