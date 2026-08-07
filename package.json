@@ -20,8 +20,8 @@
         "prepare": "husky",
         "prettier": "cd angular/components && yarn prettier && cd ../demos/showcase && yarn prettier && cd ../../../react/icons && yarn prettier && cd ../demo && yarn prettier",
         "prettier:check": "cd angular/components && yarn prettier:check && cd ../demos/showcase && yarn prettier:check && cd ../../../react/icons && yarn prettier:check && cd ../demo && yarn prettier:check",
-        "lint": "yarn --cwd angular/components && yarn --cwd angular/components lint && yarn --cwd angular/demos/showcase && yarn --cwd angular/demos/showcase lint && yarn --cwd react/icons && yarn --cwd react/icons lint",
-        "lint:fix": "yarn --cwd angular/components && yarn --cwd angular/components lint:fix && yarn --cwd angular/demos/showcase && yarn --cwd angular/demos/showcase lint:fix",
+        "lint": "cd angular/components && yarn lint && cd ../demos/showcase && yarn lint && cd ../../../react/icons && yarn lint",
+        "lint:fix": "cd angular/components && yarn lint:fix && cd ../demos/showcase && yarn lint:fix",
         "figma:publish": "yarn figma connect publish"
     },
     "devDependencies": {
