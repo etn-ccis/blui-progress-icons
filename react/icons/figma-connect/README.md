@@ -46,6 +46,7 @@ react/icons/figma-connect/
 ├── Pie.figma.tsx
 ├── Signal.figma.tsx
 └── Ups.figma.tsx
+└── BatteryLarge.figma.tsx
 ```
 
 ## Adding a New Component
