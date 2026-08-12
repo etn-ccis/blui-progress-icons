@@ -55,14 +55,14 @@ export const App = (): any => (
                             labelPosition={alignment}
                         />
                         <BatteryLarge
-                            percent={64}
+                            percent={90}
                             size={size}
                             color="#d916f7"
                             showPercentLabel={true}
                             labelPosition={alignment}
                         />
                         <BatteryLarge
-                            percent={64}
+                            percent={60}
                             size={size}
                             color="#12e7cb"
                             showPercentLabel={true}
