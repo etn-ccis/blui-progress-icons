@@ -5,7 +5,7 @@
   "prettier": "@brightlayer-ui/prettier-config",
   "dependencies": {
     "@material-ui/core": "^4.0.0",
-    "@brightlayer-ui/react-progress-icons": "^2.1.0",
+    "@brightlayer-ui/react-progress-icons": "^2.2.1",
     "@brightlayer-ui/react-themes": "^6.0.0",
     "@testing-library/jest-dom": "^5.0.0",
     "@testing-library/react": "^11.0.0",

@@ -1,12 +1,18 @@
 # Changelog
 
+## v2.3.0 (Unreleased)
+
+### Added
+
+- BatteryLarge progress icon (`<Progress.BatteryLarge>`).
+
 ## v2.2.1 (April 7, 2026)
 
 ### Fixed
 
 -   Signal progress icon sizing / bounding box behavior (`#275`).
 
-## v2.2.0 (february 24, 2026)
+## v2.2.0 (February 24, 2026)
 
 ### Added
 

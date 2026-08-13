@@ -1283,10 +1283,10 @@
   resolved "https://registry.yarnpkg.com/@brightlayer-ui/prettier-config/-/prettier-config-1.0.3.tgz#e40a7ae7435c6fd5118acbf249080e0aa81e93af"
   integrity sha512-EYm3+V7Qd+oYEF+8FadsXAZqXryEHHbGnrV1BMp9selhABjceqUqXPVE4Sn3SKWQdBNJ3En2A3EzgrzRbvRTaw==
 
-"@brightlayer-ui/react-progress-icons@^2.1.0":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/react-progress-icons/-/react-progress-icons-2.1.1.tgz#a23cbababa12fa3c50a1206a33709cef56d8ee7d"
-  integrity sha512-pNQ62FbWZdVla0RAneBDdUevTBS+C6MsyLLdTaWVoOvhltKDwWGTGuWw2xm0bLFUmZn1VvBB/rmDaRi85x4vAA==
+"@brightlayer-ui/react-progress-icons@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/react-progress-icons/-/react-progress-icons-2.2.1.tgz#4d2a69f62f038c15a8e8ae85d1d6649b19008e10"
+  integrity sha512-W1CkJArgN8KfLjMCzT6lqUzcgWqu37TpNaeXMG3cKYHzzU+OvUgMavoHBW6eQl61ikSEztn3b/ty9LzXL1CdXA==
   dependencies:
     clsx "^1.1.1"
     color "^3.1.2"
