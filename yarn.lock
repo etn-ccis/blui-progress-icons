@@ -46,10 +46,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/css-tokenizer/-/css-tokenizer-3.0.4.tgz#333fedabc3fd1a8e5d0100013731cf19e6a8c5d3"
   integrity sha512-Vd/9EVDiu6PPJt9yAh6roZP6El1xHrdvIVGjyBsHR0RYwNHgL7FJPyIIW4fANJNG6FtyZfvlRPpFI4ZM/lubvw==
 
-"@figma/code-connect@^1.4.9":
-  version "1.4.9"
-  resolved "https://registry.yarnpkg.com/@figma/code-connect/-/code-connect-1.4.9.tgz#d8d70f8a71ac4ca21d474a36d3aa73bcdbf1c403"
-  integrity sha512-Ifan9Kb5oXHAh0wXu0BM8Iy+AEhWM8NoJSTBr3oU0vQTwggleK55CUHnh5zEYl6tQjj83mg6mTo4klDgcgDprg==
+"@figma/code-connect@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@figma/code-connect/-/code-connect-1.5.0.tgz#17588d1d9d6817fea5894bdad2ddddeec06f6173"
+  integrity sha512-dzdSDvZrDHTEm7oh/J5RMeb3BWcJRUt7+xxf9IpuFoI/Z1avsVACGe0Igr5o0GKyJha+obrrhLwzOlQUta8yHA==
   dependencies:
     boxen "5.1.1"
     chalk "^4.1.2"
@@ -57,6 +57,7 @@
     compare-versions "^6.1.0"
     cross-spawn "^7.0.3"
     dotenv "^16.3.1"
+    esbuild-wasm "0.27.3"
     fast-fuzzy "^1.12.0"
     find-up "^5.0.0"
     glob "^11.0.4"
@@ -353,6 +354,11 @@ es-set-tostringtag@^2.1.0:
     get-intrinsic "^1.2.6"
     has-tostringtag "^1.0.2"
     hasown "^2.0.2"
+
+esbuild-wasm@0.27.3:
+  version "0.27.3"
+  resolved "https://registry.yarnpkg.com/esbuild-wasm/-/esbuild-wasm-0.27.3.tgz#99311a6d97e65d281ed55fc397d72374073950a4"
+  integrity sha512-AUXuOxZ145/5Az+lIqk6TdJbxKTyDGkXMJpTExmBdbnHR6n6qAFx+F4oG9ORpVYJ9dQYeQAqzv51TO4DFKsbXw==
 
 fast-fuzzy@^1.12.0:
   version "1.12.0"
