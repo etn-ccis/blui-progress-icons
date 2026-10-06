@@ -14,6 +14,7 @@ Currently, we have icons available for:
 -   pie
 -   ups
 -   signal
+-   BatteryLarge
 
 ## Installation
 
@@ -28,12 +29,13 @@ yarn add @brightlayer-ui/react-progress-icons
 The progress icon components can be imported and used like you would use any other component. You can manually set the desired color for the icon, otherwise it will inherit the text color of its parent container;
 
 ```tsx
-import {Battery, Heart, Pie, Signal} from '@brightlayer-ui/react-progress-icons';
-...
+import {Battery, Heart, Pie, Signal, BatteryLarge} from '@brightlayer-ui/react-progress-icons';
+
 <Battery percent={100} size={36} color={'green'} charging={true} outlined={true}/>
 <Heart percent={50} size={18} color={'pink'} outlined={true}/>
 <Pie percent={50} size={48} color={'blue'} ring={4} outlined={true}/>
 <Signal percent={80} size={36} color={'orange'} outlined={true}/>
+<BatteryLarge percent={56} size={28} color={'yellow'} outlined={true}/>
 ```
 
 ## API

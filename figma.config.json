@@ -1,0 +1,7 @@
+{
+  "codeConnect": {
+    "include": ["react/icons/figma-connect/**/*.figma.tsx", "react/icons/src/**/*.{tsx,ts}"],
+    "parser": "react",
+    "label": "React"
+  }
+}

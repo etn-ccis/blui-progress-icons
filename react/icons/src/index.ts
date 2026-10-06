@@ -6,6 +6,7 @@
  This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
  **/
 export { Battery } from './Battery';
+export { BatteryLarge } from './BatteryLarge';
 export { Heart } from './Heart';
 export { Pie } from './Pie';
 export { Signal } from './Signal';
